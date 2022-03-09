@@ -1,0 +1,49 @@
+<div class="container" *ngIf="!showloader">
+
+    <div class="d-flex justify-content-center">
+        <h4 class=" mt-5">{{ isNew() ? 'Create' : 'Edit' }} Address </h4>
+    </div>
+    <div class="d-flex justify-content-center">
+        <img [src]="img">
+    </div>
+    <form [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="title">ID</label>
+            <input autocomplete="off" type="text" class="form-control form-control-sm" formControlName="id" id="id"
+                readonly>
+        </div>
+
+        <div class="form-group">
+            <label for="Adhar">Adhar</label>
+            <input maxlength="12" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('Adhar') && isTouched('Adhar'),
+                            'is-valid' : !hasErrors('Adhar') && isTouched('Adhar')}"
+                class="form-control form-control-sm" formControlName="Adhar" id="Adhar">
+            <div *ngIf="hasError('Adhar', 'required')" class="invalid-feedback">
+                Adhar is required
+            </div>
+            <div *ngIf="hasError('Adhar', 'minlength') || hasError('Adhar', 'maxlength')" class="invalid-feedback">
+                Must be 12 characters
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Address">Address</label>
+            <textarea maxlength="2000" autocomplete="off" rows="5" type="text" [ngClass]="{'is-invalid' : hasErrors('Address') && isTouched('Address'),
+                            'is-valid' : !hasErrors('Address') && isTouched('Address')}"
+                class="form-control form-control-sm" formControlName="Address" id="Address"></textarea>
+            <div *ngIf="hasError('Address', 'required')" class="invalid-feedback">
+                Address is required
+            </div>
+            <div *ngIf="hasError('Address', 'minlength') || hasError('Address', 'maxlength')" class="invalid-feedback">
+                Must be between 10-2000 characters
+            </div>
+        </div>
+
+        <button class="btn bg-primary text-light mr-2" [disabled]="!dataForm.valid && !!dataForm.pristine">
+            Save
+        </button>
+
+    </form>
+
+</div>
+<div *ngIf="showloader" id="loader"></div>

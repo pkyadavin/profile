@@ -1,0 +1,4 @@
+1. Users mgmt/password
+2. Photo
+3. printouts
+4. scan adhar no 
