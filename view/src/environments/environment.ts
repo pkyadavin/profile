@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
- //webApi: "https://MicroFinanceapi.azurewebsites.net/api"
-  webApi: "http://localhost:50128/api"  
+  webApi: "https://g-profile-api.azurewebsites.net/api"
+ // webApi: "http://localhost:50128/api"  
 };
 
 /*

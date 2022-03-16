@@ -1,6 +1,6 @@
-export class Address {
+export class Profile {
 	id: number;  
     Adhar: string=''; 
-    Address: string=''; 
+    Profile: string=''; 
     pin: string=''; 
 }

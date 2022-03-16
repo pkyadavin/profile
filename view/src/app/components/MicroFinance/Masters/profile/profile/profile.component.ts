@@ -6,24 +6,24 @@ import { GridOptions } from 'ag-grid-community';
 import { ToastrService } from 'ngx-toastr';
 import { AccountService } from 'src/app/services/account.service';
 import { ExcelService } from 'src/app/services/excel.service';
-import { Disbursement } from '../Disbursement.model';
-import { DisbursementService } from '../Disbursement.service';
+import { Profile } from '../profile.model';
+import { ProfileService } from '../profile.service';
 @Component({
-  selector: 'app-Disbursement',
-  templateUrl: './Disbursement.component.html',
-  styleUrls: ['./Disbursement.component.css'],
+  selector: 'app-Profile',
+  templateUrl: './Profile.component.html',
+  styleUrls: ['./Profile.component.css'],
   providers: [DatePipe]
 })
-export class DisbursementComponent implements OnInit {
+export class ProfileComponent implements OnInit {
 
   pagesize = 10;
   gridOptions: GridOptions;
-  userdatas: Disbursement[];
+  userdatas: Profile[];
   columnDefs = [];
 
   frameworkComponents:any;
   constructor(
-    private DisbursementService: DisbursementService,
+    private ProfileService: ProfileService,
     private router: Router,
     private toastr: ToastrService,
     private accountService: AccountService,
@@ -42,7 +42,7 @@ export class DisbursementComponent implements OnInit {
   ngOnInit(): void {
     this.userdatas = [];
     let currentApplicationUserId = this.accountService.currentUserValue.applicationUserId;
-    this.DisbursementService.getByApplicationUserId(currentApplicationUserId).subscribe(userdatas => {
+    this.ProfileService.getByApplicationUserId(currentApplicationUserId).subscribe(userdatas => {
       this.userdatas = userdatas;
       console.log(userdatas);
     });
@@ -55,7 +55,7 @@ export class DisbursementComponent implements OnInit {
     this.columnDefs = [
       { headerName: 'id'.toUpperCase(), field: 'id',editable: true, sortable: true, filter: 'agTextColumnFilter', width: 150 ,floatingFilter:true  },
       { headerName: 'Adhar'.toUpperCase(), field: 'Adhar',editable: true, sortable: true, filter: 'agTextColumnFilter', width: 150 ,floatingFilter:true  },
-      { headerName: 'Amount'.toUpperCase(), field: 'Amount',editable: true, sortable: true, filter: 'agTextColumnFilter', width: 150 ,floatingFilter:true  },
+      { headerName: 'Profile'.toUpperCase(), field: 'Profile',editable: true, sortable: true, filter: 'agTextColumnFilter', width: 300 ,floatingFilter:true  },
     
     ];
   }
@@ -81,8 +81,8 @@ export class DisbursementComponent implements OnInit {
     return element;
   }
 
-  deleteConfirmed(data: Disbursement, datas: Disbursement[]) {  
-    this.DisbursementService.delete(data.id).subscribe(() => {
+  deleteConfirmed(data: Profile, datas: Profile[]) {  
+    this.ProfileService.delete(data.id).subscribe(() => {
       let index = 0;
       for (let i = 0; i < datas.length; i++) {
         if (datas[i].id === data.id) {
@@ -98,36 +98,37 @@ export class DisbursementComponent implements OnInit {
   }
 
   reloadPage(){ 
-    if(this.router.url.indexOf("Disbursements")>0){
-      this.router.navigate([`/Disbursement/`]);
+    if(this.router.url.indexOf("Profiles")>0){
+      this.router.navigate([`/Profile/`]);
     }else{
-      this.router.navigate([`/Disbursements/`]);
+      this.router.navigate([`/Profiles/`]);
     }
   }
 
   editdata(ID: number) {   
-    this.router.navigate([`/Disbursement/${ID}`]);
+    this.router.navigate([`/Profile/${ID}`]);
   }
 
   createdata() { 
-    this.router.navigate(['/Disbursement/-1']);
+    this.router.navigate(['/Profile/-1']);
   }
 
   import = false;
   Import() {
-    this.router.navigate(['/Disbursementimport/']);   
+    this.router.navigate(['/Profileimport/']);   
   }
 
   Export() {
+    console.log(this.userdatas);
     let array = this.userdatas.map(v => {
       return {
-        id: v.id.toString(),        
+        //id: v.id.toString(),        
         Adhar: v.Adhar.toString(),      
-        Amount: v.Amount.toString(), 
+        Profile: v.Profile , 
       }
     })
-    let col=["id","Adhar","Amount"  ]
-    this.excelService.Export( array,col,'Disbursement');
+    let col=["Adhar","Profile"  ]
+    this.excelService.Export( array,col,'Profile');
   }
 
   Print(id){
@@ -150,5 +151,8 @@ export class DisbursementComponent implements OnInit {
     this.gridOptions.api.paginationSetPageSize(Number(this.pagesize));
     this.gridOptions.api.onFilterChanged();
   }
-
+  showgrid=false
+  Show(){
+    this.showgrid=!this.showgrid;
+  }
 }

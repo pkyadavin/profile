@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  webApi: "https://MicroFinanceapi.azurewebsites.net/api"
+  webApi: "https://g-profile-api.azurewebsites.net/api"
 };

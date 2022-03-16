@@ -26,19 +26,10 @@ import { AgGridModule } from 'ag-grid-angular';
 import { NumbersOnlyDirective } from './directives/numbers-only.directive';
 import { marritalStatusFloatingFilter } from './gridcomponents/MarritalStatus';
  
- 
-import { InstallmentsComponent } from './components/MicroFinance/Masters/installments/installments/installments.component';
-import { InstallmentsEditComponent } from './components/MicroFinance/Masters/installments/installments-edit/installments-edit.component';
-import { InstallmentsImportComponent } from './components/MicroFinance/Masters/installments/installments-import/installments-import.component';
 
-import { DisbursementComponent } from './components/MicroFinance/Masters/Disbursement/Disbursement/Disbursement.component';
-import { DisbursementEditComponent } from './components/MicroFinance/Masters/Disbursement/Disbursement-edit/Disbursement-edit.component';
-import { DisbursementImportComponent } from './components/MicroFinance/Masters/Disbursement/Disbursement-import/Disbursement-import.component';
-
-import { dueComponent } from './components/MicroFinance/Masters/due/due/due.component';
-import { AddressComponent } from './components/MicroFinance/Masters/address/address/address.component';
-import { AddressEditComponent } from './components/MicroFinance/Masters/address/address-edit/address-edit.component';
-import { AddressImportComponent } from './components/MicroFinance/Masters/address/address-import/address-import.component';
+import { ProfileComponent } from './components/MicroFinance/Masters/profile/profile/profile.component';
+import { ProfileEditComponent } from './components/MicroFinance/Masters/profile/profile-edit/profile-edit.component';
+import { ProfileImportComponent } from './components/MicroFinance/Masters/profile/profile-import/profile-import.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,16 +41,10 @@ import { AddressImportComponent } from './components/MicroFinance/Masters/addres
     PhotoAlbumComponent,
     NumbersOnlyDirective,
     marritalStatusFloatingFilter, 
-    InstallmentsComponent,
-    InstallmentsEditComponent,
-    InstallmentsImportComponent, 
-    DisbursementComponent,
-    DisbursementEditComponent,
-    DisbursementImportComponent, 
-    dueComponent,
-    AddressComponent,
-    AddressEditComponent,
-    AddressImportComponent
+
+    ProfileComponent,
+    ProfileEditComponent,
+    ProfileImportComponent
   ],
   imports: [
     BrowserModule,

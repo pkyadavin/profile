@@ -7,17 +7,17 @@ import { Photo } from 'src/app/models/photo/photo.model';
 import { PhotoService } from 'src/app/services/photo.service';
 import { AccountService } from 'src/app/services/account.service';
 import { DatePipe } from '@angular/common';
-import { Disbursement } from '../Disbursement.model';
-import { DisbursementService } from '../Disbursement.service';
+import { Profile } from '../profile.model';
+import { ProfileService } from '../profile.service';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
-  selector: 'app-Disbursement-edit',
-  templateUrl: './Disbursement-edit.component.html',
-  styleUrls: ['./Disbursement-edit.component.css'],
+  selector: 'app-Profile-edit',
+  templateUrl: './Profile-edit.component.html',
+  styleUrls: ['./Profile-edit.component.css'],
   providers: [DatePipe]
 })
-export class DisbursementEditComponent  implements OnInit , AfterViewInit{
+export class ProfileEditComponent  implements OnInit , AfterViewInit{
   showloader=false;
   dataForm: FormGroup;
   confirmImageDelete: boolean = false;
@@ -32,7 +32,7 @@ export class DisbursementEditComponent  implements OnInit , AfterViewInit{
   constructor(
     private route: ActivatedRoute,
     private formBuilder: FormBuilder,
-    private DisbursementService: DisbursementService,
+    private ProfileService: ProfileService,
     private photoService: PhotoService,
     private toastr: ToastrService,
     public accountService: AccountService,
@@ -44,11 +44,14 @@ export class DisbursementEditComponent  implements OnInit , AfterViewInit{
   ngOnInit(): void {
 
      this.id = parseInt(this.route.snapshot.paramMap.get('id'));
-
+     let adhar="";
+     if(this.id!=-1 ){
+       adhar=this.id.toString();
+     }
     this.dataForm = this.formBuilder.group({
-      id: [this.id],      
-      Adhar	: ['', [Validators.required,Validators.minLength(12),Validators.maxLength(12) ]],     
-      Amount	: ['', [Validators.required,Validators.minLength(5),Validators.maxLength(5) ]], 
+      id: [-1],      
+      Adhar	: [adhar, [Validators.required,Validators.minLength(12),Validators.maxLength(12) ]],     
+      Profile	: ['', [Validators.required,Validators.minLength(10),Validators.maxLength(2000) ]], 
 
     });
 
@@ -64,26 +67,26 @@ export class DisbursementEditComponent  implements OnInit , AfterViewInit{
     // this.dataService.getCenter(this.accountService.currentUserValue.applicationUserId).subscribe(res => {
     //   this.centerlist= res;              
     // }); 
-    if (!!this.id  && this.id  !== -1) {
-      this.showloader=true;
-      this.DisbursementService.get(this.id ).subscribe(data => {
-        console.log(JSON.stringify(data)  );
-        this.updateForm(data);
-        this.showloader=false;
-      });
-    }
+    // if (!!this.id  && this.id  !== -1) {
+    //   this.showloader=true;
+    //   this.ProfileService.get(this.id ).subscribe(data => {
+    //     console.log(JSON.stringify(data)  );
+    //     this.updateForm(data);
+    //     this.showloader=false;
+    //   });
+    // }
   }
  
   ngAfterViewInit() {
     console.log('Parent After View Init'); 
   }
 dob;
-  updateForm(Disbursement: Disbursement) {
+  updateForm(Profile: Profile) {
 
     this.dataForm.patchValue({
-      id: Disbursement.id,    
-      Adhar: Disbursement.Adhar, 
-      Amount: Disbursement.Amount,      
+      id: Profile.id,    
+      Adhar: Profile.Adhar, 
+      Profile: Profile.Profile,      
  
     });  
     console.log(this.dataForm);
@@ -124,14 +127,14 @@ dob;
   }
 
   onSubmit() {    
-    let data: Disbursement = new Disbursement(); 
-    data.id=this.id; 
+    let data: Profile = new Profile(); 
+    data.id=-1; 
     data.Adhar=this.dataForm.get("Adhar").value;   
-    data.Amount= (this.dataForm.get("Amount").value);   
-    this.DisbursementService.create(data).subscribe(createddata => {
+    data.Profile= (this.dataForm.get("Profile").value);   
+    this.ProfileService.create(data).subscribe(createddata => {
       this.updateForm(createddata);
-      this.toastr.info("Disbursement saved.");
-      this.router.navigate(['/Disbursement/']);
+      this.toastr.info("Profile saved.");
+      this.router.navigate(['/Profile/']);
     })
   }
 }

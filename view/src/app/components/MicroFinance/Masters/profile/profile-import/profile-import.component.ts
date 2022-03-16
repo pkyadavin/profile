@@ -6,26 +6,26 @@ import { GridOptions } from 'ag-grid-community';
 import { ToastrService } from 'ngx-toastr';
 import { AccountService } from 'src/app/services/account.service';
 import { ExcelService } from 'src/app/services/excel.service';
-import { Address } from '../Address.model';
-import { AddressService } from '../Address.service';
+import { Profile } from '../profile.model';
+import { ProfileService } from '../profile.service';
 import * as XLSX from 'xlsx';
 
 @Component({
-  selector: 'app-Address-import',
-  templateUrl: './Address-import.component.html',
-  styleUrls: ['./Address-import.component.css'],
+  selector: 'app-Profile-import',
+  templateUrl: './Profile-import.component.html',
+  styleUrls: ['./Profile-import.component.css'],
   providers: [DatePipe]
 })
-export class AddressImportComponent  implements OnInit {
+export class ProfileImportComponent  implements OnInit {
 
   pagesize = 10;
   gridOptions: GridOptions;
-  userdatas: Address[];
+  userdatas: Profile[];
   columnDefs = [];
 
   frameworkComponents: any;
   constructor(
-    private AddressService: AddressService,
+    private ProfileService: ProfileService,
     private router: Router,
     private toastr: ToastrService,
     private accountService: AccountService,
@@ -48,7 +48,7 @@ export class AddressImportComponent  implements OnInit {
     let cc=this;
     this.columnDefs = [
       { headerName: 'Adhar'.toUpperCase(), field: 'Adhar',editable: true, sortable: true, filter: 'agTextColumnFilter', width: 150 ,floatingFilter:true  },
-      { headerName: 'Address'.toUpperCase(), field: 'Address',editable: true, sortable: true, filter: 'agTextColumnFilter', width: 150 ,floatingFilter:true  },
+      { headerName: 'Profile'.toUpperCase(), field: 'Profile',editable: true, sortable: true, filter: 'agTextColumnFilter', width: 150 ,floatingFilter:true  },
      {
         headerName: 'EDIT', width: 100, cellRenderer: (param) =>
         this.EDITRenderer(param)
@@ -67,15 +67,15 @@ export class AddressImportComponent  implements OnInit {
   }
 
   reloadPage() {
-    if (this.router.url.indexOf("Addresss") > 0) {
-      this.router.navigate([`/Address/`]);
+    if (this.router.url.indexOf("Profiles") > 0) {
+      this.router.navigate([`/Profile/`]);
     } else {
-      this.router.navigate([`/Addresss/`]);
+      this.router.navigate([`/Profiles/`]);
     }
   }
 
   editdata(ID: number) {
-    this.router.navigate([`/Address/${ID}`]);
+    this.router.navigate([`/Profile/${ID}`]);
   }
 
   addfile(event) {
@@ -109,13 +109,13 @@ export class AddressImportComponent  implements OnInit {
       return {
         id: -1,           
         Adhar: v.Adhar.toString(),  
-        Address:  v.Address.toString() ,    
+        Profile:  v.Profile.toString() ,    
         pin:""
       }
     });
 
-        this.AddressService.createall(array).subscribe(v=>{
-          this.router.navigate(['/Address/']);
+        this.ProfileService.createall(array).subscribe(v=>{
+          this.router.navigate(['/Profile/']);
         });
   }
 

@@ -8,17 +8,10 @@ import { PhotoAlbumComponent } from './components/photo-album/photo-album.compon
  
 import { AuthGuard } from './guards/auth.guard';
  
-import { InstallmentsComponent } from './components/MicroFinance/Masters/installments/installments/installments.component';
-import { InstallmentsEditComponent } from './components/MicroFinance/Masters/installments/installments-edit/installments-edit.component';
-import { InstallmentsImportComponent } from './components/MicroFinance/Masters/installments/installments-import/installments-import.component';
-import { DisbursementComponent } from './components/MicroFinance/Masters/Disbursement/Disbursement/Disbursement.component';
-import { DisbursementEditComponent } from './components/MicroFinance/Masters/Disbursement/Disbursement-edit/Disbursement-edit.component';
-import { DisbursementImportComponent } from './components/MicroFinance/Masters/Disbursement/Disbursement-import/Disbursement-import.component';
 
-import { dueComponent } from './components/MicroFinance/Masters/due/due/due.component';
-import { AddressComponent } from './components/MicroFinance/Masters/address/address/address.component';
-import { AddressImportComponent } from './components/MicroFinance/Masters/address/address-import/address-import.component';
-import { AddressEditComponent } from './components/MicroFinance/Masters/address/address-edit/address-edit.component';
+import { ProfileComponent } from './components/MicroFinance/Masters/profile/profile/profile.component';
+import { ProfileImportComponent } from './components/MicroFinance/Masters/profile/profile-import/profile-import.component';
+import { ProfileEditComponent } from './components/MicroFinance/Masters/profile/profile-edit/profile-edit.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -27,24 +20,16 @@ const routes: Routes = [
   // MicriFinance
  
 
-  {path: 'Installments', component: InstallmentsComponent, canActivate: [AuthGuard]},
-  {path: 'Installments/:id', component: InstallmentsEditComponent, canActivate: [AuthGuard]},
-  {path: 'Installmentsimport', component: InstallmentsImportComponent, canActivate: [AuthGuard]},
 
-  
-  {path: 'Disbursement', component: DisbursementComponent, canActivate: [AuthGuard]},
-  {path: 'Disbursement/:id', component: DisbursementEditComponent, canActivate: [AuthGuard]},
-  {path: 'Disbursementimport', component: DisbursementImportComponent, canActivate: [AuthGuard]},
+  {path: 'Profile', component: ProfileComponent, canActivate: [AuthGuard]},
+  {path: 'Profile/:id', component: ProfileEditComponent, canActivate: [AuthGuard]},
+  {path: 'Profileimport', component: ProfileImportComponent, canActivate: [AuthGuard]},
 
-  {path: 'address', component: AddressComponent, canActivate: [AuthGuard]},
-  {path: 'address/:id', component: AddressEditComponent, canActivate: [AuthGuard]},
-  {path: 'addressimport', component: AddressImportComponent, canActivate: [AuthGuard]},
+  {path: 'Profile', component: ProfileComponent, canActivate: [AuthGuard]},
+  {path: 'Profile/:id', component: ProfileEditComponent, canActivate: [AuthGuard]},
+  {path: 'Profileimport', component: ProfileImportComponent, canActivate: [AuthGuard]},
 
-  {path: 'Address', component: AddressComponent, canActivate: [AuthGuard]},
-  {path: 'Address/:id', component: AddressEditComponent, canActivate: [AuthGuard]},
-  {path: 'Addressimport', component: AddressImportComponent, canActivate: [AuthGuard]},
 
-  {path: 'due', component: dueComponent, canActivate: [AuthGuard]},
 
    // MicriFinance
 

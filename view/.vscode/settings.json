@@ -1,4 +1,4 @@
 {
     "appService.deploySubpath": "dist\\BlogLab-UI",
-    "appService.defaultWebAppToDeploy": "/subscriptions/19bc6d25-2a4c-4fd2-a4bd-054f5da96624/resourceGroups/appsvc_windows_centralus2/providers/Microsoft.Web/sites/Mastersin"
+    "appService.defaultWebAppToDeploy": "/subscriptions/19bc6d25-2a4c-4fd2-a4bd-054f5da96624/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/MastersMF"
 }
