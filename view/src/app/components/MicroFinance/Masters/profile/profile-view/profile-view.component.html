@@ -1,0 +1,46 @@
+<div class="container" *ngIf="!showloader">
+
+    <div class="d-flex justify-content-center">
+        <h4 class=" mt-5"> View  Application </h4>
+    </div>
+    <div class="d-flex justify-content-center">
+        <img [src]="img">
+    </div>   
+    <ng-template [ngIf]="!showgrid">
+        <div id="loader" class="loader" ></div>  
+    </ng-template>
+    <ng-template [ngIf]="showgrid">
+    <table class="table table-sm">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Property</th>
+            <th scope="col">Value</th>            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Adhar</td>
+            <td>{{profile.Adhar}}</td>            
+          </tr> 
+          <tr>
+            <th scope="row">2</th>
+            <td>First Name</td>
+            <td>{{profile.firstName}}</td>            
+          </tr> 
+          <tr>
+            <th scope="row">3</th>
+            <td>Last Name</td>
+            <td>{{profile.lastName}}</td>            
+          </tr> 
+          <tr>
+            <th scope="row">4</th>
+            <td>Phone</td>
+            <td>{{profile.phone}}</td>            
+          </tr>      
+        </tbody>
+      </table>
+    </ng-template>
+</div>
+<div *ngIf="showloader" id="loader"></div>

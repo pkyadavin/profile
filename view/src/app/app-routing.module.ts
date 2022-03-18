@@ -12,7 +12,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { ProfileComponent } from './components/MicroFinance/Masters/profile/profile/profile.component';
 import { ProfileImportComponent } from './components/MicroFinance/Masters/profile/profile-import/profile-import.component';
 import { ProfileEditComponent } from './components/MicroFinance/Masters/profile/profile-edit/profile-edit.component';
-
+import { ProfileViewComponent } from './components/MicroFinance/Masters/profile/profile-view/profile-view.component';
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'login', component: LoginComponent},
@@ -28,7 +28,7 @@ const routes: Routes = [
   {path: 'Profile', component: ProfileComponent, canActivate: [AuthGuard]},
   {path: 'Profile/:id', component: ProfileEditComponent, canActivate: [AuthGuard]},
   {path: 'Profileimport', component: ProfileImportComponent, canActivate: [AuthGuard]},
-
+  {path: 'ProfileView/:id', component: ProfileViewComponent, canActivate: [AuthGuard]},
 
 
    // MicriFinance

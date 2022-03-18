@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   ) { 
 
     if (this.accountService.isLoggedIn()) {
-      this.router.navigate(['/due']);
+      this.router.navigate(['/profile']);
     }
   }
 
@@ -58,7 +58,7 @@ export class LoginComponent implements OnInit {
     );
 
     this.accountService.login(applicationUserLogin).subscribe(() => {
-      this.router.navigate(['/due']);
+      this.router.navigate(['/profile']);
     });
   }
 }

@@ -2,12 +2,14 @@
 import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { GridOptions } from 'ag-grid-community';
+import { GridOptions, ICellRendererParams } from 'ag-grid-community';
 import { ToastrService } from 'ngx-toastr';
+ 
 import { AccountService } from 'src/app/services/account.service';
 import { ExcelService } from 'src/app/services/excel.service';
 import { Profile } from '../profile.model';
 import { ProfileService } from '../profile.service';
+
 @Component({
   selector: 'app-Profile',
   templateUrl: './Profile.component.html',
@@ -20,8 +22,11 @@ export class ProfileComponent implements OnInit {
   gridOptions: GridOptions;
   userdatas: Profile[];
   columnDefs = [];
-
-  frameworkComponents:any;
+  tooltipShowDelay = 0;
+   tooltipHideDelay = 2000;
+ 
+ 
+ 
   constructor(
     private ProfileService: ProfileService,
     private router: Router,
@@ -34,8 +39,11 @@ export class ProfileComponent implements OnInit {
  
     }
     this.gridOptions.paginationPageSize=this.pagesize;
-   // this.gridOptions.floatingFilter=true;
  
+   // this.gridOptions.floatingFilter=true;
+    
+ 
+
     this.initColumns();
   }
 
@@ -55,15 +63,20 @@ export class ProfileComponent implements OnInit {
     this.columnDefs = [
       { headerName: 'id'.toUpperCase(), field: 'id',editable: true, sortable: true, filter: 'agTextColumnFilter', width: 150 ,floatingFilter:true  },
       { headerName: 'Adhar'.toUpperCase(), field: 'Adhar',editable: true, sortable: true, filter: 'agTextColumnFilter', width: 150 ,floatingFilter:true  },
-      { headerName: 'Profile'.toUpperCase(), field: 'Profile',editable: true, sortable: true, filter: 'agTextColumnFilter', width: 300 ,floatingFilter:true  },
-    
+      { headerName: 'Profile'.toUpperCase(), field: 'Profile',editable: true, sortable: true, filter: 'agTextColumnFilter', width: 300 ,floatingFilter:true 
+      
+     },
+      {
+        headerName: 'View', width: 75, cellRenderer: (param) =>
+        this.EDITRenderer(param)
+      }, 
     ];
   }
 
-
+ 
   EDITRenderer(param) {  
     var element = document.createElement('span');
-    let template = '<i class="fas fa-edit"></i>';
+    let template = '<i class="fas fa-eye"></i>';
     element.innerHTML = template;
     element.addEventListener('click', () => {
       this.editdata(param.data.id);
@@ -106,7 +119,7 @@ export class ProfileComponent implements OnInit {
   }
 
   editdata(ID: number) {   
-    this.router.navigate([`/Profile/${ID}`]);
+    this.router.navigate([`/ProfileView/${ID}`]);
   }
 
   createdata() { 

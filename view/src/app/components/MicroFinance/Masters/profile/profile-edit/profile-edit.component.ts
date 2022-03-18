@@ -50,7 +50,10 @@ export class ProfileEditComponent  implements OnInit , AfterViewInit{
      }
     this.dataForm = this.formBuilder.group({
       id: [-1],      
-      Adhar	: [adhar, [Validators.required,Validators.minLength(12),Validators.maxLength(12) ]],     
+      Adhar	: [adhar, [Validators.required,Validators.minLength(12),Validators.maxLength(12) ]],  
+      firstName	: ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]],   
+      lastName	: ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]],  
+      phone	: ['', [Validators.required,Validators.minLength(10),Validators.maxLength(10) ]],    
       Profile	: ['', [Validators.required,Validators.minLength(10),Validators.maxLength(2000) ]], 
 
     });
@@ -130,7 +133,7 @@ dob;
     let data: Profile = new Profile(); 
     data.id=-1; 
     data.Adhar=this.dataForm.get("Adhar").value;   
-    data.Profile= (this.dataForm.get("Profile").value);   
+    data.Profile=JSON.stringify (this.dataForm.value);   
     this.ProfileService.create(data).subscribe(createddata => {
       this.updateForm(createddata);
       this.toastr.info("Profile saved.");

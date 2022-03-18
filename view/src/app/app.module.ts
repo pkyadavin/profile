@@ -30,6 +30,9 @@ import { marritalStatusFloatingFilter } from './gridcomponents/MarritalStatus';
 import { ProfileComponent } from './components/MicroFinance/Masters/profile/profile/profile.component';
 import { ProfileEditComponent } from './components/MicroFinance/Masters/profile/profile-edit/profile-edit.component';
 import { ProfileImportComponent } from './components/MicroFinance/Masters/profile/profile-import/profile-import.component';
+import { ProfileViewComponent } from './components/MicroFinance/Masters/profile/profile-view/profile-view.component';
+ 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,10 +44,11 @@ import { ProfileImportComponent } from './components/MicroFinance/Masters/profil
     PhotoAlbumComponent,
     NumbersOnlyDirective,
     marritalStatusFloatingFilter, 
-
+    ProfileViewComponent,
     ProfileComponent,
     ProfileEditComponent,
-    ProfileImportComponent
+    ProfileImportComponent,
+ 
   ],
   imports: [
     BrowserModule,
@@ -52,7 +56,7 @@ import { ProfileImportComponent } from './components/MicroFinance/Masters/profil
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,  
-    AgGridModule.withComponents([marritalStatusFloatingFilter]),
+    AgGridModule.withComponents( [marritalStatusFloatingFilter]),
     ReactiveFormsModule,
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right'
