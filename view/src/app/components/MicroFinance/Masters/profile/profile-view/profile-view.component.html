@@ -1,46 +1,80 @@
 <div class="container" *ngIf="!showloader">
-
-    <div class="d-flex justify-content-center">
-        <h4 class=" mt-5"> View  Application </h4>
+  <div class="d-flex justify-content-center">
+    <h4 class=" mt-5"> View Application </h4>
+  </div>
+  <div class="d-flex justify-content-center">
+    <img [src]="img">
+  </div>
+  <ng-template [ngIf]="!showgrid">
+    <div id="loader" class="loader"></div>
+  </ng-template>
+  <ng-template [ngIf]="showgrid">
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        &nbsp;
+        <button class="btn btn-sm btn-outline-primary mt-4 " (click)="ExportPDF()">
+          Export to PDF
+        </button>
+      </div>
     </div>
-    <div class="d-flex justify-content-center">
-        <img [src]="img">
-    </div>   
-    <ng-template [ngIf]="!showgrid">
-        <div id="loader" class="loader" ></div>  
-    </ng-template>
-    <ng-template [ngIf]="showgrid">
     <table class="table table-sm">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Property</th>
-            <th scope="col">Value</th>            
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Adhar</td>
-            <td>{{profile.Adhar}}</td>            
-          </tr> 
-          <tr>
-            <th scope="row">2</th>
-            <td>First Name</td>
-            <td>{{profile.firstName}}</td>            
-          </tr> 
-          <tr>
-            <th scope="row">3</th>
-            <td>Last Name</td>
-            <td>{{profile.lastName}}</td>            
-          </tr> 
-          <tr>
-            <th scope="row">4</th>
-            <td>Phone</td>
-            <td>{{profile.phone}}</td>            
-          </tr>      
-        </tbody>
-      </table>
-    </ng-template>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Property</th>
+          <th scope="col">Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"></th>
+          <td>Photo</td>
+          <td>
+            <img src="{{profile.photo}}" alt="Photo" width="200" height="200">
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">1</th>
+          <td>Adhar</td>
+          <td>{{profile.Adhar}}</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>First Name</td>
+          <td>{{profile.firstName}}</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Last Name</td>
+          <td>{{profile.lastName}}</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Phone</td>
+          <td>{{profile.phone}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-template>
+</div>
+<div id="pdfdata" #pdfdata style="display: none;">
+  <table style="font-family: arial, sans-serif;border-collapse: collapse;width: 100%;">
+    <tr>
+      <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">Adhar</td>
+      <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">{{profile.Adhar}}</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">First Name</td>
+      <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">{{profile.firstName}}</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">Last Name</td>
+      <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">{{profile.lastName}}</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">Phone</td>
+      <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">{{profile.phone}}</td>
+    </tr>
+  </table>
 </div>
 <div *ngIf="showloader" id="loader"></div>

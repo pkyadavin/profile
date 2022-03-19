@@ -55,7 +55,7 @@ export class ProfileEditComponent  implements OnInit , AfterViewInit{
       lastName	: ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]],  
       phone	: ['', [Validators.required,Validators.minLength(10),Validators.maxLength(10) ]],    
       Profile	: ['', [Validators.required,Validators.minLength(10),Validators.maxLength(2000) ]], 
-
+      photo	: ['', [Validators.required,Validators.minLength(1),Validators.maxLength(500) ]],   
     });
 
     // this.photoService.getByApplicationUserId().subscribe(userPhotos => {
@@ -132,12 +132,21 @@ dob;
   onSubmit() {    
     let data: Profile = new Profile(); 
     data.id=-1; 
-    data.Adhar=this.dataForm.get("Adhar").value;   
+    data.Adhar=this.dataForm.get("Adhar").value; 
     data.Profile=JSON.stringify (this.dataForm.value);   
     this.ProfileService.create(data).subscribe(createddata => {
       this.updateForm(createddata);
       this.toastr.info("Profile saved.");
       this.router.navigate(['/Profile/']);
     })
+  }
+  response;
+  public uploadFinished = (event) => {
+    this.response = event.fileURL;
+    this.dataForm.patchValue({
+      photo: this.response       
+ 
+    });  
+    console.log(this.response);
   }
 }

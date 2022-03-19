@@ -17,7 +17,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { PhotoAlbumComponent } from './components/photo-album/photo-album.component';
+ 
 
 import { JwtInterceptor } from './interceptors/jwt.interceptor';
 import { ErrorInterceptor } from './interceptors/error.interceptor';
@@ -31,6 +31,7 @@ import { ProfileComponent } from './components/MicroFinance/Masters/profile/prof
 import { ProfileEditComponent } from './components/MicroFinance/Masters/profile/profile-edit/profile-edit.component';
 import { ProfileImportComponent } from './components/MicroFinance/Masters/profile/profile-import/profile-import.component';
 import { ProfileViewComponent } from './components/MicroFinance/Masters/profile/profile-view/profile-view.component';
+import { UploadComponent } from './components/upload/upload.component';
  
 
 @NgModule({
@@ -40,15 +41,14 @@ import { ProfileViewComponent } from './components/MicroFinance/Masters/profile/
     HomeComponent,
     LoginComponent,
     NavbarComponent,
-    NotFoundComponent,
-    PhotoAlbumComponent,
+    NotFoundComponent, 
     NumbersOnlyDirective,
     marritalStatusFloatingFilter, 
     ProfileViewComponent,
     ProfileComponent,
     ProfileEditComponent,
     ProfileImportComponent,
- 
+    UploadComponent,
   ],
   imports: [
     BrowserModule,
