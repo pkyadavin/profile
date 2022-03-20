@@ -14,7 +14,7 @@ import { ProfileImportComponent } from './components/MicroFinance/Masters/profil
 import { ProfileEditComponent } from './components/MicroFinance/Masters/profile/profile-edit/profile-edit.component';
 import { ProfileViewComponent } from './components/MicroFinance/Masters/profile/profile-view/profile-view.component';
 const routes: Routes = [
-  {path: '', component: HomeComponent},
+  {path: '', component: LoginComponent},
   {path: 'login', component: LoginComponent},
   // MicriFinance
 

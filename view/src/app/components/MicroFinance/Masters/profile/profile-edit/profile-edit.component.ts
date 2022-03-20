@@ -50,34 +50,39 @@ export class ProfileEditComponent  implements OnInit , AfterViewInit{
      }
     this.dataForm = this.formBuilder.group({
       id: [-1],      
-      Adhar	: [adhar, [Validators.required,Validators.minLength(12),Validators.maxLength(12) ]],  
-      firstName	: ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]],   
-      lastName	: ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]],  
-      phone	: ['', [Validators.required,Validators.minLength(10),Validators.maxLength(10) ]],    
-      Profile	: ['', [Validators.required,Validators.minLength(10),Validators.maxLength(2000) ]], 
-      photo	: ['', [Validators.required,Validators.minLength(1),Validators.maxLength(500) ]],   
-    });
+      Adhar	: [adhar, [Validators.required,Validators.minLength(12),Validators.maxLength(12) ]],    
+      phone	: ['', [Validators.required,Validators.minLength(10),Validators.maxLength(10) ]],
+      photo	: ['', [Validators.required,Validators.minLength(1),Validators.maxLength(500) ]], 
+      name	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]], 
+      dob	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]], 
+      gender	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]], 
+      fatherhusbandName	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]], 
+      fatherhusbandId	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]], 
+      fatherhusbanddob	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]], 
+      motherName	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]], 
+      Address	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]], 
+      district 	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]], 
+      language	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]], 
+      familyIncome	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]], 
+      RentedOrSelfHome	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]], 
+      loanAmount	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]], 
+      loanProcesingFee	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]], 
+      insuranceFee	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]], 
+      loanPurpose 	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]], 
+      coinsurerName	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]], 
+      CiGeneder	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]], 
+      Cidob	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]], 
+      CiIdProof	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]], 
+      pin	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]], 
+      bankAccountHolderName	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]], 
+      accountNumber	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]], 
+      ifscCode	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]], 
+      bankName	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(50) ]],      
 
-    // this.photoService.getByApplicationUserId().subscribe(userPhotos => {
-    //   this.userPhotos = userPhotos;     
-    // }); 
-    // this.dataService.getBranch(this.accountService.currentUserValue.applicationUserId).subscribe(res => {
-    //   this.branchlist= res;        
-    // }); 
-    // this.dataService.getProduct(this.accountService.currentUserValue.applicationUserId).subscribe(res => {
-    //   this.productlist= res;             
-    // });
-    // this.dataService.getCenter(this.accountService.currentUserValue.applicationUserId).subscribe(res => {
-    //   this.centerlist= res;              
-    // }); 
-    // if (!!this.id  && this.id  !== -1) {
-    //   this.showloader=true;
-    //   this.ProfileService.get(this.id ).subscribe(data => {
-    //     console.log(JSON.stringify(data)  );
-    //     this.updateForm(data);
-    //     this.showloader=false;
-    //   });
-    // }
+      Profile	: ['', [Validators.required,Validators.minLength(10),Validators.maxLength(2000) ]], 
+
+    });
+  
   }
  
   ngAfterViewInit() {

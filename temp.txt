@@ -1,0 +1,15 @@
+
+--ddl (shop/agri/vegitable/animals/)
+
+        <div class="form-group">
+            <label for="bankName">bankName</label>
+            <input maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('bankName') && isTouched('bankName'),
+                            'is-valid' : !hasErrors('bankName') && isTouched('bankName')}"
+                class="form-control form-control-sm" formControlbankName="bankName" id="bankName">
+            <div *ngIf="hasError('bankName', 'required')" class="invalid-feedback">
+                bankName is required
+            </div>
+            <div *ngIf="hasError('bankName', 'minlength') || hasError('bankName', 'maxlength')" class="invalid-feedback">
+                Must be 10 characters
+            </div>
+        </div>

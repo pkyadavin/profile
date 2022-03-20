@@ -1,2 +1,89 @@
-1. prepare data for demo
-10 clients
+Customer Details
+0 .custmerId
+1. loanid-same
+2. centername 
+centerid
+2. staffName
+2. staff id
+1. Name==l+f
+2. DOB
+3. Male/Female
+3. father/husband name+adharID
+4. F/h DOB
+5. Mother Name
+6. Address
+7. District Dropdown
+8. language
+9. Family Income
+10.Rented or self home
+11.loan amount
+12.loan procesing fee
+13.insurance fee
+13 loan purpose ddl (shop/agri/vegitable/animals/)
+14.Coinsurer name
+15.Ci - male 
+16.CI-DOB
+17.CI-IDProof
+18.PIN
+19.bank accout holder name
+20.account number
+21.IFSC Code
+22.Bank Name
+------------------- 
+
+Disbursement 
+1.loanid/
+2.custid/
+
+-------------------------------
+
+Loan Detail
+1. Region name
+2. region id
+3. Center name
+4. center id
+5. custmer detail
+6. loan detail
+7. Date
+8. amount collected
+9. passbook
+---------------
+Collection
+1.Staff name 
+Center Number
+Center Name
+CustID
+LoanID
+2.Client Name
+
+Husband Name
+Loan Amount
+Principal Amount
+interest amount
+Due amount
+Installment Number
+outstanding amount
+Date
+
+ 
+Reports:
+1. region
+2. branch
+3. staff name
+staffid
+4. Disbursement
+Branch Outstanding
+total loan
+active loan
+total customer
+total loan amount
+
+cashbook
+1. date
+2. region
+3. branch
+4. amount 
+5. CR/DR
+6. Balance
+
+
