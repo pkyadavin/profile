@@ -1,7 +1,7 @@
 <div class="container" *ngIf="!showloader">
 
     <div class="d-flex justify-content-center">
-        <h4 class=" mt-5">{{ isNew() ? 'Create' : 'Edit' }} Profile </h4>
+        <h4 class=" mt-5">{{ isNew() ?'Create' :'Edit' }} Profile </h4>
     </div>
     <div class="d-flex justify-content-center">
         <img [src]="img">
@@ -15,12 +15,12 @@
         <div class="form-group">
             <label for="Adhar">Adhar</label>
             <input maxlength="12" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('Adhar') && isTouched('Adhar'),
-                            'is-valid' : !hasErrors('Adhar') && isTouched('Adhar')}"
+                         'is-valid' : !hasErrors('Adhar') && isTouched('Adhar')}"
                 class="form-control form-control-sm" formControlName="Adhar" id="Adhar">
-            <div *ngIf="hasError('Adhar', 'required')" class="invalid-feedback">
+            <div *ngIf="hasError('Adhar','required')" class="invalid-feedback">
                 Adhar is required
             </div>
-            <div *ngIf="hasError('Adhar', 'minlength') || hasError('Adhar', 'maxlength')" class="invalid-feedback">
+            <div *ngIf="hasError('Adhar','minlength') || hasError('Adhar','maxlength')" class="invalid-feedback">
                 Must be 12 characters
             </div>
         </div>
@@ -28,36 +28,36 @@
         <div class="form-group">
             <label for="phone">Phone</label>
             <input maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('phone') && isTouched('phone'),
-                            'is-valid' : !hasErrors('phone') && isTouched('phone')}"
+                         'is-valid' : !hasErrors('phone') && isTouched('phone')}"
                 class="form-control form-control-sm" formControlName="phone" id="phone">
-            <div *ngIf="hasError('phone', 'required')" class="invalid-feedback">
+            <div *ngIf="hasError('phone','required')" class="invalid-feedback">
                 phone is required
             </div>
-            <div *ngIf="hasError('phone', 'minlength') || hasError('phone', 'maxlength')" class="invalid-feedback">
+            <div *ngIf="hasError('phone','minlength') || hasError('phone','maxlength')" class="invalid-feedback">
                 Must be 10 characters
             </div>
         </div>
         <div class="form-group">
             <label for="name">Name</label>
             <input maxlength="100" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('name') && isTouched('name'),
-                            'is-valid' : !hasErrors('name') && isTouched('name')}" class="form-control form-control-sm"
+                         'is-valid' : !hasErrors('name') && isTouched('name')}" class="form-control form-control-sm"
                 formControlName="name" id="name">
-            <div *ngIf="hasError('name', 'required')" class="invalid-feedback">
+            <div *ngIf="hasError('name','required')" class="invalid-feedback">
                 name is required
             </div>
-            <div *ngIf="hasError('name', 'minlength') || hasError('name', 'maxlength')" class="invalid-feedback">
+            <div *ngIf="hasError('name','minlength') || hasError('name','maxlength')" class="invalid-feedback">
                 Must be 10 characters
             </div>
         </div>
         <div class="form-group">
             <label for="dob">DOB</label>
             <input maxlength="10" autocomplete="off" type="date" [ngClass]="{'is-invalid' : hasErrors('dob') && isTouched('dob'),
-                            'is-valid' : !hasErrors('dob') && isTouched('dob')}" class="form-control form-control-sm"
-                formControldob="dob" id="dob">
-            <div *ngIf="hasError('dob', 'required')" class="invalid-feedback">
+                         'is-valid' : !hasErrors('dob') && isTouched('dob')}" class="form-control form-control-sm"
+                            formControlName="dob" id="dob">
+            <div *ngIf="hasError('dob','required')" class="invalid-feedback">
                 dob is required
             </div>
-            <div *ngIf="hasError('dob', 'minlength') || hasError('dob', 'maxlength')" class="invalid-feedback">
+            <div *ngIf="hasError('dob','minlength') || hasError('dob','maxlength')" class="invalid-feedback">
                 Must be 10 characters
             </div>
         </div>
@@ -65,31 +65,31 @@
             <label for="gender">Gender</label>          
               
                 <select name="gender" maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('gender') && isTouched('gender'),
-                'is-valid' : !hasErrors('gender') && isTouched('gender')}"
-    class="form-control form-control-sm" formControlgender="gender" id="gender">
+             'is-valid' : !hasErrors('gender') && isTouched('gender')}"
+    class="form-control form-control-sm" formControlName="gender" id="gender">
                     <option value="none" selected>Gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="other">other</option>
                 </select>
 
-                <div *ngIf="hasError('gender', 'required')" class="invalid-feedback">
+                <div *ngIf="hasError('gender','required')" class="invalid-feedback">
                 gender is required
             </div>
-            <div *ngIf="hasError('gender', 'minlength') || hasError('gender', 'maxlength')" class="invalid-feedback">
+            <div *ngIf="hasError('gender','minlength') || hasError('gender','maxlength')" class="invalid-feedback">
                 Must be 10 characters
             </div>
         </div>
         <div class="form-group">
             <label for="fatherhusbandName">Father/Husband Name</label>
             <input maxlength="100" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('fatherhusbandName') && isTouched('fatherhusbandName'),
-                            'is-valid' : !hasErrors('fatherhusbandName') && isTouched('fatherhusbandName')}"
-                class="form-control form-control-sm" formControlfatherhusbandName="fatherhusbandName"
+                         'is-valid' : !hasErrors('fatherhusbandName') && isTouched('fatherhusbandName')}"
+                class="form-control form-control-sm" formControlName="fatherhusbandName"
                 id="fatherhusbandName">
-            <div *ngIf="hasError('fatherhusbandName', 'required')" class="invalid-feedback">
+            <div *ngIf="hasError('fatherhusbandName','required')" class="invalid-feedback">
                 Father/Husband Name is required
             </div>
-            <div *ngIf="hasError('fatherhusbandName', 'minlength') || hasError('fatherhusbandName', 'maxlength')"
+            <div *ngIf="hasError('fatherhusbandName','minlength') || hasError('fatherhusbandName','maxlength')"
                 class="invalid-feedback">
                 Must be 10 characters
             </div>
@@ -97,12 +97,12 @@
         <div class="form-group">
             <label for="fatherhusbandId">Father/Husband Id</label>
             <input maxlength="100" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('fatherhusbandId') && isTouched('fatherhusbandId'),
-                            'is-valid' : !hasErrors('fatherhusbandId') && isTouched('fatherhusbandId')}"
-                class="form-control form-control-sm" formControlfatherhusbandId="fatherhusbandId" id="fatherhusbandId">
-            <div *ngIf="hasError('fatherhusbandId', 'required')" class="invalid-feedback">
+                         'is-valid' : !hasErrors('fatherhusbandId') && isTouched('fatherhusbandId')}"
+                class="form-control form-control-sm" formControlName="fatherhusbandId" id="fatherhusbandId">
+            <div *ngIf="hasError('fatherhusbandId','required')" class="invalid-feedback">
                 fatherhusbandId is required
             </div>
-            <div *ngIf="hasError('fatherhusbandId', 'minlength') || hasError('fatherhusbandId', 'maxlength')"
+            <div *ngIf="hasError('fatherhusbandId','minlength') || hasError('fatherhusbandId','maxlength')"
                 class="invalid-feedback">
                 Must be 10 characters
             </div>
@@ -110,13 +110,13 @@
         <div class="form-group">
             <label for="fatherhusbanddob">Father/Husband DOB</label>
             <input maxlength="10" autocomplete="off" type="date" [ngClass]="{'is-invalid' : hasErrors('fatherhusbanddob') && isTouched('fatherhusbanddob'),
-                            'is-valid' : !hasErrors('fatherhusbanddob') && isTouched('fatherhusbanddob')}"
-                class="form-control form-control-sm" formControlfatherhusbanddob="fatherhusbanddob"
+                         'is-valid' : !hasErrors('fatherhusbanddob') && isTouched('fatherhusbanddob')}"
+                class="form-control form-control-sm" formControlName="fatherhusbanddob"
                 id="fatherhusbanddob">
-            <div *ngIf="hasError('fatherhusbanddob', 'required')" class="invalid-feedback">
+            <div *ngIf="hasError('fatherhusbanddob','required')" class="invalid-feedback">
                 Father/Husband DOB is required
             </div>
-            <div *ngIf="hasError('fatherhusbanddob', 'minlength') || hasError('fatherhusbanddob', 'maxlength')"
+            <div *ngIf="hasError('fatherhusbanddob','minlength') || hasError('fatherhusbanddob','maxlength')"
                 class="invalid-feedback">
                 Must be 10 characters
             </div>
@@ -124,120 +124,120 @@
         <div class="form-group">
             <label for="motherName">Mothers Name</label>
             <input maxlength="100" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('motherName') && isTouched('motherName'),
-                            'is-valid' : !hasErrors('motherName') && isTouched('motherName')}"
-                class="form-control form-control-sm" formControlmotherName="motherName" id="motherName">
-            <div *ngIf="hasError('motherName', 'required')" class="invalid-feedback">
+                         'is-valid' : !hasErrors('motherName') && isTouched('motherName')}"
+                class="form-control form-control-sm" formControlName="motherName" id="motherName">
+            <div *ngIf="hasError('motherName','required')" class="invalid-feedback">
                 Mothers Name is required
             </div>
-            <div *ngIf="hasError('motherName', 'minlength') || hasError('motherName', 'maxlength')"
+            <div *ngIf="hasError('motherName','minlength') || hasError('motherName','maxlength')"
                 class="invalid-feedback">
                 Must be 10 characters
             </div>
         </div>
         <div class="form-group">
-            <label for="Address">Address</label>
-            <input maxlength="1000" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('Address') && isTouched('Address'),
-                            'is-valid' : !hasErrors('Address') && isTouched('Address')}"
-                class="form-control form-control-sm" formControlAddress="Address" id="Address">
-            <div *ngIf="hasError('Address', 'required')" class="invalid-feedback">
-                Address is required
+            <label for="address">address</label>
+            <input maxlength="1000" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('address') && isTouched('address'),
+                         'is-valid' : !hasErrors('address') && isTouched('address')}"
+                class="form-control form-control-sm" formControlName="address" id="address">
+            <div *ngIf="hasError('address','required')" class="invalid-feedback">
+                address is required
             </div>
-            <div *ngIf="hasError('Address', 'minlength') || hasError('Address', 'maxlength')" class="invalid-feedback">
+            <div *ngIf="hasError('address','minlength') || hasError('address','maxlength')" class="invalid-feedback">
                 Must be 10 characters
             </div>
         </div>
         <div class="form-group">
-            <label for="district ">District </label>
+            <label for="district">District </label>
             <input maxlength="100" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('district') && isTouched('district'),
-                            'is-valid' : !hasErrors('district') && isTouched('district ')}"
-                class="form-control form-control-sm" formControldistrict="district " id="district ">
-            <div *ngIf="hasError('district', 'required')" class="invalid-feedback">
+                         'is-valid' : !hasErrors('district') && isTouched('district')}"
+                class="form-control form-control-sm" formControlName="district" id="district">
+            <div *ngIf="hasError('district','required')" class="invalid-feedback">
                 district is required
             </div>
-            <div *ngIf="hasError('district', 'minlength') || hasError('district', 'maxlength')"
+            <div *ngIf="hasError('district','minlength') || hasError('district','maxlength')"
                 class="invalid-feedback">
                 Must be 10 characters
             </div>
         </div>
         <div class="form-group">
-            <label for="language ">Language </label>
-            <input maxlength="100" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('language') && isTouched('language'),
-                            'is-valid' : !hasErrors('language') && isTouched('language ')}"
-                class="form-control form-control-sm" formControllanguage="language " id="language ">
-            <div *ngIf="hasError('language', 'required')" class="invalid-feedback">
+            <label for="language">Language </label>
+            <input maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('language') && isTouched('language'),
+                         'is-valid' : !hasErrors('language') && isTouched('language')}"
+                class="form-control form-control-sm" formControlName="language" id="language">
+            <div *ngIf="hasError('language','required')" class="invalid-feedback">
                 language is required
             </div>
-            <div *ngIf="hasError('language', 'minlength') || hasError('language', 'maxlength')"
+            <div *ngIf="hasError('language','minlength') || hasError('language','maxlength')"
                 class="invalid-feedback">
                 Must be 10 characters
             </div>
         </div>
         <div class="form-group">
-            <label for="familyIncome ">Family Income </label>
+            <label for="familyIncome">Family Income </label>
             <input maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('familyIncome') && isTouched('familyIncome'),
-                            'is-valid' : !hasErrors('familyIncome') && isTouched('familyIncome ')}"
-                class="form-control form-control-sm" formControlfamilyIncome="familyIncome " id="familyIncome ">
-            <div *ngIf="hasError('familyIncome', 'required')" class="invalid-feedback">
+                         'is-valid' : !hasErrors('familyIncome') && isTouched('familyIncome')}"
+                class="form-control form-control-sm" formControlName="familyIncome" id="familyIncome">
+            <div *ngIf="hasError('familyIncome','required')" class="invalid-feedback">
                 Family Income is required
             </div>
-            <div *ngIf="hasError('familyIncome', 'minlength') || hasError('familyIncome', 'maxlength')"
+            <div *ngIf="hasError('familyIncome','minlength') || hasError('familyIncome','maxlength')"
                 class="invalid-feedback">
                 Must be 10 characters
             </div>
         </div>
 
         <div class="form-group">
-            <label for="RentedOrSelfHome ">Rented Or Self Home </label>
-            <input maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('RentedOrSelfHome') && isTouched('RentedOrSelfHome'),
-                            'is-valid' : !hasErrors('RentedOrSelfHome') && isTouched('RentedOrSelfHome ')}"
-                class="form-control form-control-sm" formControlRentedOrSelfHome="RentedOrSelfHome "
-                id="RentedOrSelfHome ">
-            <div *ngIf="hasError('RentedOrSelfHome', 'required')" class="invalid-feedback">
-                RentedOrSelfHome is required
+            <label for="rentedOrSelfHome">Rented Or Self Home </label>
+            <input maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('rentedOrSelfHome') && isTouched('rentedOrSelfHome'),
+                         'is-valid' : !hasErrors('rentedOrSelfHome') && isTouched('rentedOrSelfHome')}"
+                class="form-control form-control-sm" formControlName="rentedOrSelfHome"
+                id="rentedOrSelfHome">
+            <div *ngIf="hasError('rentedOrSelfHome','required')" class="invalid-feedback">
+                rentedOrSelfHomeis required
             </div>
-            <div *ngIf="hasError('RentedOrSelfHome', 'minlength') || hasError('RentedOrSelfHome', 'maxlength')"
+            <div *ngIf="hasError('rentedOrSelfHome','minlength') || hasError('rentedOrSelfHome','maxlength')"
                 class="invalid-feedback">
                 Must be 10 characters
             </div>
         </div>
 
         <div class="form-group">
-            <label for="loanAmount ">Loan Amount </label>
+            <label for="loanAmount">Loan Amount </label>
             <input maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('loanAmount') && isTouched('loanAmount'),
-                            'is-valid' : !hasErrors('loanAmount') && isTouched('loanAmount ')}"
-                class="form-control form-control-sm" formControlloanAmount="loanAmount " id="loanAmount ">
-            <div *ngIf="hasError('loanAmount', 'required')" class="invalid-feedback">
+                         'is-valid' : !hasErrors('loanAmount') && isTouched('loanAmount')}"
+                class="form-control form-control-sm" formControlName="loanAmount" id="loanAmount">
+            <div *ngIf="hasError('loanAmount','required')" class="invalid-feedback">
                 loanAmount is required
             </div>
-            <div *ngIf="hasError('loanAmount', 'minlength') || hasError('loanAmount', 'maxlength')"
+            <div *ngIf="hasError('loanAmount','minlength') || hasError('loanAmount','maxlength')"
                 class="invalid-feedback">
                 Must be 10 characters
             </div>
         </div>
         <div class="form-group">
-            <label for="loanProcesingFee ">Loan Procesing Fee </label>
+            <label for="loanProcesingFee">Loan Procesing Fee </label>
             <input maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('loanProcesingFee') && isTouched('loanProcesingFee'),
-                            'is-valid' : !hasErrors('loanProcesingFee') && isTouched('loanProcesingFee ')}"
-                class="form-control form-control-sm" formControlloanProcesingFee="loanProcesingFee "
-                id="loanProcesingFee ">
-            <div *ngIf="hasError('loanProcesingFee', 'required')" class="invalid-feedback">
+                         'is-valid' : !hasErrors('loanProcesingFee') && isTouched('loanProcesingFee')}"
+                class="form-control form-control-sm" formControlName="loanProcesingFee"
+                id="loanProcesingFee">
+            <div *ngIf="hasError('loanProcesingFee','required')" class="invalid-feedback">
                 loanProcesingFee is required
             </div>
-            <div *ngIf="hasError('loanProcesingFee', 'minlength') || hasError('loanProcesingFee', 'maxlength')"
+            <div *ngIf="hasError('loanProcesingFee','minlength') || hasError('loanProcesingFee','maxlength')"
                 class="invalid-feedback">
                 Must be 10 characters
             </div>
         </div>
 
         <div class="form-group">
-            <label for="insuranceFee ">Insurance Fee </label>
+            <label for="insuranceFee">Insurance Fee </label>
             <input maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('insuranceFee') && isTouched('insuranceFee'),
-                            'is-valid' : !hasErrors('insuranceFee') && isTouched('insuranceFee ')}"
-                class="form-control form-control-sm" formControlinsuranceFee="insuranceFee " id="insuranceFee ">
-            <div *ngIf="hasError('insuranceFee', 'required')" class="invalid-feedback">
+                         'is-valid' : !hasErrors('insuranceFee') && isTouched('insuranceFee')}"
+                class="form-control form-control-sm" formControlName="insuranceFee" id="insuranceFee">
+            <div *ngIf="hasError('insuranceFee','required')" class="invalid-feedback">
                 insuranceFee is required
             </div>
-            <div *ngIf="hasError('insuranceFee', 'minlength') || hasError('insuranceFee', 'maxlength')"
+            <div *ngIf="hasError('insuranceFee','minlength') || hasError('insuranceFee','maxlength')"
                 class="invalid-feedback">
                 Must be 10 characters
             </div>
@@ -246,12 +246,12 @@
         <div class="form-group">
             <label for="loanPurpose">Loan Purpose </label>
             <input maxlength="100" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('loanPurpose') && isTouched('loanPurpose'),
-                            'is-valid' : !hasErrors('loanPurpose') && isTouched('loanPurpose')}"
-                class="form-control form-control-sm" formControlloanPurpose="loanPurpose" id="loanPurpose">
-            <div *ngIf="hasError('loanPurpose', 'required')" class="invalid-feedback">
+                         'is-valid' : !hasErrors('loanPurpose') && isTouched('loanPurpose')}"
+                class="form-control form-control-sm" formControlName="loanPurpose" id="loanPurpose">
+            <div *ngIf="hasError('loanPurpose','required')" class="invalid-feedback">
                 loanPurposeis required
             </div>
-            <div *ngIf="hasError('loanPurpose', 'minlength') || hasError('loanPurpose', 'maxlength')"
+            <div *ngIf="hasError('loanPurpose','minlength') || hasError('loanPurpose','maxlength')"
                 class="invalid-feedback">
                 Must be 10 characters
             </div>
@@ -259,12 +259,12 @@
         <div class="form-group">
             <label for="coinsurerName">Coinsurer Name </label>
             <input maxlength="100" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('coinsurerName') && isTouched('coinsurerName'),
-                            'is-valid' : !hasErrors('coinsurerName') && isTouched('coinsurerName')}"
-                class="form-control form-control-sm" formControlcoinsurerName="coinsurerName" id="coinsurerName">
-            <div *ngIf="hasError('coinsurerName', 'required')" class="invalid-feedback">
+                         'is-valid' : !hasErrors('coinsurerName') && isTouched('coinsurerName')}"
+                class="form-control form-control-sm" formControlName="coinsurerName" id="coinsurerName">
+            <div *ngIf="hasError('coinsurerName','required')" class="invalid-feedback">
                 coinsurerNameis required
             </div>
-            <div *ngIf="hasError('coinsurerName', 'minlength') || hasError('coinsurerName', 'maxlength')"
+            <div *ngIf="hasError('coinsurerName','minlength') || hasError('coinsurerName','maxlength')"
                 class="invalid-feedback">
                 Must be 10 characters
             </div>
@@ -272,46 +272,46 @@
 
 
         <div class="form-group">
-            <label for="CiGeneder ">Coinsurer Geneder </label>          
-                <select name="gender" maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('CiGeneder') && isTouched('CiGeneder'),
-                'is-valid' : !hasErrors('CiGeneder') && isTouched('CiGeneder')}"
-    class="form-control form-control-sm" formControlCiGeneder="CiGeneder" id="CiGeneder">
+            <label for="ciGeneder">Coinsurer Geneder </label>          
+                <select name="gender" maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('ciGeneder') && isTouched('ciGeneder'),
+             'is-valid' : !hasErrors('ciGeneder') && isTouched('ciGeneder')}"
+    class="form-control form-control-sm" formControlName="ciGeneder" id="ciGeneder">
                     <option value="none" selected>Gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="other">other</option>
                 </select>
 
-            <div *ngIf="hasError('CiGeneder', 'required')" class="invalid-feedback">
-                CiGeneder is required
+            <div *ngIf="hasError('ciGeneder','required')" class="invalid-feedback">
+                ciGeneder is required
             </div>
-            <div *ngIf="hasError('CiGeneder', 'minlength') || hasError('CiGeneder', 'maxlength')"
+            <div *ngIf="hasError('ciGeneder','minlength') || hasError('ciGeneder','maxlength')"
                 class="invalid-feedback">
                 Must be 10 characters
             </div>
         </div>
 
         <div class="form-group">
-            <label for="Cidob">Coinsurer DOB</label>
-            <input maxlength="10" autocomplete="off" type="date" [ngClass]="{'is-invalid' : hasErrors('Cidob') && isTouched('Cidob'),
-                            'is-valid' : !hasErrors('Cidob') && isTouched('Cidob')}"
-                class="form-control form-control-sm" formControlCidob="Cidob" id="Cidob">
-            <div *ngIf="hasError('Cidob', 'required')" class="invalid-feedback">
-                Cidob is required
+            <label for="cidob">Coinsurer DOB</label>
+            <input maxlength="10" autocomplete="off" type="date" [ngClass]="{'is-invalid' : hasErrors('cidob') && isTouched('cidob'),
+                         'is-valid' : !hasErrors('cidob') && isTouched('cidob')}"
+                class="form-control form-control-sm" formControlName="cidob" id="cidob">
+            <div *ngIf="hasError('cidob','required')" class="invalid-feedback">
+                cidob is required
             </div>
-            <div *ngIf="hasError('Cidob', 'minlength') || hasError('Cidob', 'maxlength')" class="invalid-feedback">
+            <div *ngIf="hasError('cidob','minlength') || hasError('cidob','maxlength')" class="invalid-feedback">
                 Must be 10 characters
             </div>
         </div>
         <div class="form-group">
-            <label for="CiIdProof">Coinsurer Id Proof</label>
-            <input maxlength="12" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('CiIdProof') && isTouched('CiIdProof'),
-                            'is-valid' : !hasErrors('CiIdProof') && isTouched('CiIdProof')}"
-                class="form-control form-control-sm" formControlCiIdProof="CiIdProof" id="CiIdProof">
-            <div *ngIf="hasError('CiIdProof', 'required')" class="invalid-feedback">
-                CiIdProof is required
+            <label for="ciIdProof">Coinsurer Id Proof</label>
+            <input maxlength="12" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('ciIdProof') && isTouched('ciIdProof'),
+                         'is-valid' : !hasErrors('ciIdProof') && isTouched('ciIdProof')}"
+                class="form-control form-control-sm" formControlName="ciIdProof" id="ciIdProof">
+            <div *ngIf="hasError('ciIdProof','required')" class="invalid-feedback">
+                ciIdProof is required
             </div>
-            <div *ngIf="hasError('CiIdProof', 'minlength') || hasError('CiIdProof', 'maxlength')"
+            <div *ngIf="hasError('ciIdProof','minlength') || hasError('ciIdProof','maxlength')"
                 class="invalid-feedback">
                 Must be 10 characters
             </div>
@@ -319,38 +319,38 @@
         <div class="form-group">
             <label for="pin">PIN</label>
             <input maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('pin') && isTouched('pin'),
-                            'is-valid' : !hasErrors('pin') && isTouched('pin')}" class="form-control form-control-sm"
-                formControlpin="pin" id="pin">
-            <div *ngIf="hasError('pin', 'required')" class="invalid-feedback">
+                         'is-valid' : !hasErrors('pin') && isTouched('pin')}" class="form-control form-control-sm"
+                            formControlName="pin" id="pin">
+            <div *ngIf="hasError('pin','required')" class="invalid-feedback">
                 pin is required
             </div>
-            <div *ngIf="hasError('pin', 'minlength') || hasError('pin', 'maxlength')" class="invalid-feedback">
+            <div *ngIf="hasError('pin','minlength') || hasError('pin','maxlength')" class="invalid-feedback">
                 Must be 10 characters
             </div>
         </div>
         <div class="form-group">
             <label for="bankAccountHolderName">Bank Account Holder Name</label>
             <input maxlength="100" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('bankAccountHolderName') && isTouched('bankAccountHolderName'),
-                            'is-valid' : !hasErrors('bankAccountHolderName') && isTouched('bankAccountHolderName')}"
-                class="form-control form-control-sm" formControlbankAccountHolderName="bankAccountHolderName"
+                         'is-valid' : !hasErrors('bankAccountHolderName') && isTouched('bankAccountHolderName')}"
+                class="form-control form-control-sm" formControlName="bankAccountHolderName"
                 id="bankAccountHolderName">
-            <div *ngIf="hasError('bankAccountHolderName', 'required')" class="invalid-feedback">
+            <div *ngIf="hasError('bankAccountHolderName','required')" class="invalid-feedback">
                 bankAccountHolderName is required
             </div>
-            <div *ngIf="hasError('bankAccountHolderName', 'minlength') || hasError('bankAccountHolderName', 'maxlength')"
+            <div *ngIf="hasError('bankAccountHolderName','minlength') || hasError('bankAccountHolderName','maxlength')"
                 class="invalid-feedback">
                 Must be 10 characters
             </div>
         </div>
         <div class="form-group">
             <label for="accountNumber">Account Number</label>
-            <input maxlength="100" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('accountNumber') && isTouched('accountNumber'),
-                            'is-valid' : !hasErrors('accountNumber') && isTouched('accountNumber')}"
-                class="form-control form-control-sm" formControlaccountNumber="accountNumber" id="accountNumber">
-            <div *ngIf="hasError('accountNumber', 'required')" class="invalid-feedback">
+            <input maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('accountNumber') && isTouched('accountNumber'),
+                         'is-valid' : !hasErrors('accountNumber') && isTouched('accountNumber')}"
+                class="form-control form-control-sm" formControlName="accountNumber" id="accountNumber">
+            <div *ngIf="hasError('accountNumber','required')" class="invalid-feedback">
                 accountNumber is required
             </div>
-            <div *ngIf="hasError('accountNumber', 'minlength') || hasError('accountNumber', 'maxlength')"
+            <div *ngIf="hasError('accountNumber','minlength') || hasError('accountNumber','maxlength')"
                 class="invalid-feedback">
                 Must be 10 characters
             </div>
@@ -358,12 +358,12 @@
         <div class="form-group">
             <label for="ifscCode">ifsc Code</label>
             <input maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('ifscCode') && isTouched('ifscCode'),
-                            'is-valid' : !hasErrors('ifscCode') && isTouched('ifscCode')}"
-                class="form-control form-control-sm" formControlifscCode="ifscCode" id="ifscCode">
-            <div *ngIf="hasError('ifscCode', 'required')" class="invalid-feedback">
+                         'is-valid' : !hasErrors('ifscCode') && isTouched('ifscCode')}"
+                class="form-control form-control-sm" formControlName="ifscCode" id="ifscCode">
+            <div *ngIf="hasError('ifscCode','required')" class="invalid-feedback">
                 ifscCode is required
             </div>
-            <div *ngIf="hasError('ifscCode', 'minlength') || hasError('ifscCode', 'maxlength')"
+            <div *ngIf="hasError('ifscCode','minlength') || hasError('ifscCode','maxlength')"
                 class="invalid-feedback">
                 Must be 10 characters
             </div>
@@ -371,12 +371,12 @@
         <div class="form-group">
             <label for="bankName">Bank Name</label>
             <input maxlength="100" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('bankName') && isTouched('bankName'),
-                            'is-valid' : !hasErrors('bankName') && isTouched('bankName')}"
-                class="form-control form-control-sm" formControlbankName="bankName" id="bankName">
-            <div *ngIf="hasError('bankName', 'required')" class="invalid-feedback">
+                         'is-valid' : !hasErrors('bankName') && isTouched('bankName')}"
+                class="form-control form-control-sm" formControlName="bankName" id="bankName">
+            <div *ngIf="hasError('bankName','required')" class="invalid-feedback">
                 bankName is required
             </div>
-            <div *ngIf="hasError('bankName', 'minlength') || hasError('bankName', 'maxlength')"
+            <div *ngIf="hasError('bankName','minlength') || hasError('bankName','maxlength')"
                 class="invalid-feedback">
                 Must be 10 characters
             </div>
@@ -384,12 +384,12 @@
         <div class="form-group">
             <label for="Profile">Profile Comment </label>
             <textarea maxlength="2000" autocomplete="off" rows="5" type="text" [ngClass]="{'is-invalid' : hasErrors('Profile') && isTouched('Profile'),
-                            'is-valid' : !hasErrors('Profile') && isTouched('Profile')}"
+                         'is-valid' : !hasErrors('Profile') && isTouched('Profile')}"
                 class="form-control form-control-sm" formControlName="Profile" id="Profile"></textarea>
-            <div *ngIf="hasError('Profile', 'required')" class="invalid-feedback">
+            <div *ngIf="hasError('Profile','required')" class="invalid-feedback">
                 Profile is required
             </div>
-            <div *ngIf="hasError('Profile', 'minlength') || hasError('Profile', 'maxlength')" class="invalid-feedback">
+            <div *ngIf="hasError('Profile','minlength') || hasError('Profile','maxlength')" class="invalid-feedback">
                 Must be between 10-2000 characters
             </div>
         </div>

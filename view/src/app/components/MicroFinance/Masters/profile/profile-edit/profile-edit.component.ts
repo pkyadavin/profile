@@ -50,40 +50,38 @@ export class ProfileEditComponent  implements OnInit , AfterViewInit{
      }
     this.dataForm = this.formBuilder.group({
       id: [-1],   
-      phone	: ['', [Validators.required,Validators.minLength(10),Validators.maxLength(10) ]],   
-      Adhar	: [adhar, [Validators.required,Validators.minLength(12),Validators.maxLength(12) ]],   
+      phone	:['',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]],   
+      Adhar	:[adhar,[Validators.required,Validators.minLength(12),Validators.maxLength(12)]],   
     
-      pin	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(12) ]], 
-      loanAmount	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(12) ]], 
-      loanProcesingFee	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(12) ]], 
-      insuranceFee	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(12) ]], 
-      familyIncome	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(12) ]],
-      language	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(12) ]], 
-      ifscCode	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(12) ]], 
-      accountNumber	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(12) ]], 
-      CiIdProof	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(12) ]], 
-      CiGeneder	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(12) ]], 
+      pin	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(12)]], 
+      loanAmount	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(12)]], 
+      loanProcesingFee	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(12)]], 
+      insuranceFee	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(12)]], 
+      familyIncome	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(12)]],
+      language	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(12)]], 
+      ifscCode	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(12)]], 
+      accountNumber	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(12)]], 
+      ciIdProof	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(12)]], 
+      ciGeneder	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(12)]], 
    
-      name	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(100) ]], 
-      dob	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(100) ]], 
-      gender	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(100) ]], 
-      fatherhusbandName	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(100) ]], 
-      fatherhusbandId	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(100) ]], 
-      fatherhusbanddob	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(100) ]], 
-      motherName	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(100) ]],      
-      district 	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(100) ]],       
-      RentedOrSelfHome	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(100) ]],   
-      loanPurpose 	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(100) ]], 
-      coinsurerName	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(100) ]],      
-      Cidob	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(100) ]],       
-      bankAccountHolderName	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(100) ]],    
-      bankName	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(100) ]],
+      name	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(100)]], 
+      dob	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(100)]], 
+      gender	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(100)]], 
+      fatherhusbandName	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(100)]], 
+      fatherhusbandId	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(100)]], 
+      fatherhusbanddob	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(100)]], 
+      motherName	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(100)]],      
+      district 	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(100)]],       
+      rentedOrSelfHome	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(100)]],   
+      loanPurpose 	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(100)]], 
+      coinsurerName	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(100)]],      
+      cidob	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(100)]],       
+      bankAccountHolderName	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(100)]],    
+      bankName	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(100)]],
 
-      photo	: ['', [Validators.required,Validators.minLength(1),Validators.maxLength(500) ]], 
-      Address	 : ['', [Validators.required,Validators.minLength(3),Validators.maxLength(2000) ]],
-      Profile	: ['', [Validators.required,Validators.minLength(10),Validators.maxLength(2000) ]], 
-
-     
+      photo	:['',[Validators.required,Validators.minLength(1),Validators.maxLength(500)]], 
+      address	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(2000)]],
+      Profile	:['',[Validators.required,Validators.minLength(10),Validators.maxLength(2000)]],      
 
     });
   
@@ -97,8 +95,8 @@ dob;
 
     this.dataForm.patchValue({
       id: Profile.id,    
-      Adhar: Profile.Adhar, 
-      Profile: Profile.Profile,      
+      Adhar:Profile.Adhar, 
+      Profile:Profile.Profile,      
  
     });  
     console.log(this.dataForm);
