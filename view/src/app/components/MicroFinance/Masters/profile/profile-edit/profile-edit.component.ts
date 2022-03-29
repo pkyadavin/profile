@@ -51,7 +51,16 @@ export class ProfileEditComponent  implements OnInit , AfterViewInit{
     this.dataForm = this.formBuilder.group({
       id: [-1],   
       phone	:['',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]],   
-      Adhar	:[adhar,[Validators.required,Validators.minLength(12),Validators.maxLength(12)]],   
+      Adhar	:[adhar,[Validators.required,Validators.minLength(12),Validators.maxLength(12)]],  
+
+      custmerId	:['',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]], 
+      loanId	:['',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]], 
+      centerName	:['',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]], 
+      centerId	:['',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]], 
+      staffName	:['',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]], 
+      staffId	:['',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]], 
+      
+   
     
       pin	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(12)]], 
       loanAmount	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(12)]], 

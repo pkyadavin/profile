@@ -9,9 +9,9 @@ export class Profile {
     centerId	: string='';
     staffName	: string='';
     staffId	: string='';
-    Name	: string='';
 
-    
+
+    Name	: string='';    
     dob	: string='';
     Gender	: string='';
     fatherhusbandName	: string='';
