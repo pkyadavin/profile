@@ -10,6 +10,8 @@ export class Profile {
     staffName	: string='';
     staffId	: string='';
     Name	: string='';
+
+    
     dob	: string='';
     Gender	: string='';
     fatherhusbandName	: string='';
