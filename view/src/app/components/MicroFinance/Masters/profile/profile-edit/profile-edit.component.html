@@ -346,20 +346,20 @@
 
 
         <div class="form-group">
-            <label class="text-uppercase"for="ciGeneder">Coinsurer Geneder </label>          
-                <select name="gender" maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('ciGeneder') && isTouched('ciGeneder'),
-             'is-valid' : !hasErrors('ciGeneder') && isTouched('ciGeneder')}"
-    class="form-control form-control-sm" formControlName="ciGeneder" id="ciGeneder">
+            <label class="text-uppercase"for="ciGender">Coinsurer Gender </label>          
+                <select name="gender" maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('ciGender') && isTouched('ciGender'),
+             'is-valid' : !hasErrors('ciGender') && isTouched('ciGender')}"
+    class="form-control form-control-sm" formControlName="ciGender" id="ciGender">
                     <option value="none" selected>Gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="other">other</option>
                 </select>
 
-            <div *ngIf="hasError('ciGeneder','required')" class="invalid-feedback">
-                ciGeneder is required
+            <div *ngIf="hasError('ciGender','required')" class="invalid-feedback">
+                ciGender is required
             </div>
-            <div *ngIf="hasError('ciGeneder','minlength') || hasError('ciGeneder','maxlength')"
+            <div *ngIf="hasError('ciGender','minlength') || hasError('ciGender','maxlength')"
                 class="invalid-feedback">
                 Must be 10 characters
             </div>

@@ -71,7 +71,7 @@ export class ProfileEditComponent  implements OnInit , AfterViewInit{
       ifscCode	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(12)]], 
       accountNumber	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(12)]], 
       ciIdProof	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(12)]], 
-      ciGeneder	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(12)]], 
+      ciGender	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(12)]], 
    
       name	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(100)]], 
       dob	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(100)]], 

@@ -28,7 +28,7 @@ export class Profile {
     insuranceFee	: string='';
     loanPurpose 	: string='';
     coinsurerName	: string='';
-    ciGeneder	: string='';
+    ciGender	: string='';
     cidob	: string='';
     ciIdProof	: string='';
     pin	: string='';
