@@ -17,10 +17,17 @@
         </button>
       </div>
     </div>
-    <table class="table table-sm">     
+    <table class="table table-sm">
+      <thead>
+        <tr>
+        
+          <th scope="col">Property</th>
+          <th scope="col">Value</th>
+        </tr>
+      </thead>
       <tbody>
         <tr *ngIf="profile.photo">
-          <th scope="row"></th>
+          
           <td class="text-uppercase">Photo</td>
           <td>
             <img src="{{profile.photo}}" alt="Photo" width="200" height="200">
@@ -202,12 +209,7 @@
 </div>
 <div id="pdfdata" #pdfdata style="display: none;"> 
   <table style="font-family: arial, sans-serif;border-collapse: collapse;width: 100%;">
-    <thead>
-      <tr>       
-        <th scope="col">Property</th>
-        <th scope="col">Value</th>
-      </tr>
-    </thead>
+   
     <tbody>
       <tr >
        
