@@ -210,9 +210,9 @@
         </div>
         <div class="form-group">
             <label class="text-uppercase"for="address">address</label>
-            <input maxlength="1000" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('address') && isTouched('address'),
+            <textarea rows="4" maxlength="1000" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('address') && isTouched('address'),
                          'is-valid' : !hasErrors('address') && isTouched('address')}"
-                class="form-control form-control-sm" formControlName="address" id="address">
+                class="form-control form-control-sm" formControlName="address" id="address"></textarea>
             <div *ngIf="hasError('address','required')" class="invalid-feedback">
                 address is required
             </div>
