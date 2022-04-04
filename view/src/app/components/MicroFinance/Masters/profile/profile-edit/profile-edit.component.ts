@@ -148,7 +148,7 @@ dob;
   onSubmit() {    
     let data: Profile = new Profile(); 
     data.id=-1; 
-    data.Adhar=this.dataForm.get("Adhar").value; 
+    data.Adhar=this.dataForm.get("Adhar").value.toString(); 
     data.Profile=JSON.stringify (this.dataForm.value);
     console.log("this.dataForm.value");  
     console.log(this.dataForm.value);  
