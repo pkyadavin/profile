@@ -14,7 +14,7 @@
         </div>
         <div class="form-group">
             <label class="text-uppercase"for="Adhar">Adhar</label>
-            <input maxlength="12" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('Adhar') && isTouched('Adhar'),
+            <input NumbersOnly maxlength="12" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('Adhar') && isTouched('Adhar'),
                          'is-valid' : !hasErrors('Adhar') && isTouched('Adhar')}"
                 class="form-control form-control-sm" formControlName="Adhar" id="Adhar">
             <div *ngIf="hasError('Adhar','required')" class="invalid-feedback">
@@ -27,7 +27,7 @@
 
         <div class="form-group">
             <label class="text-uppercase"for="custmerId">custmerId</label>
-            <input maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('custmerId') && isTouched('custmerId'),
+            <input NumbersOnly maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('custmerId') && isTouched('custmerId'),
                          'is-valid' : !hasErrors('custmerId') && isTouched('custmerId')}"
                 class="form-control form-control-sm" formControlName="custmerId" id="custmerId">
             <div *ngIf="hasError('custmerId','required')" class="invalid-feedback">
@@ -39,7 +39,7 @@
         </div>
         <div class="form-group">
             <label class="text-uppercase"for="loanId">loanId</label>
-            <input maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('loanId') && isTouched('loanId'),
+            <input NumbersOnly maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('loanId') && isTouched('loanId'),
                          'is-valid' : !hasErrors('loanId') && isTouched('loanId')}"
                 class="form-control form-control-sm" formControlName="loanId" id="loanId">
             <div *ngIf="hasError('loanId','required')" class="invalid-feedback">
@@ -63,7 +63,7 @@
         </div>
         <div class="form-group">
             <label class="text-uppercase"for="centerId">centerId</label>
-            <input maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('centerId') && isTouched('centerId'),
+            <input NumbersOnly maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('centerId') && isTouched('centerId'),
                          'is-valid' : !hasErrors('centerId') && isTouched('centerId')}"
                 class="form-control form-control-sm" formControlName="centerId" id="centerId">
             <div *ngIf="hasError('centerId','required')" class="invalid-feedback">
@@ -74,7 +74,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="text-uppercase"for="staffName">staffName</label>
+            <label class="text-uppercase"for="staffName">staff Name</label>
             <input maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('staffName') && isTouched('staffName'),
                          'is-valid' : !hasErrors('staffName') && isTouched('staffName')}"
                 class="form-control form-control-sm" formControlName="staffName" id="staffName">
@@ -87,8 +87,8 @@
         </div>
 
         <div class="form-group">
-            <label class="text-uppercase"for="staffId">staffId</label>
-            <input maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('staffId') && isTouched('staffId'),
+            <label class="text-uppercase"for="staffId">staff Id</label>
+            <input NumbersOnly maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('staffId') && isTouched('staffId'),
                          'is-valid' : !hasErrors('staffId') && isTouched('staffId')}"
                 class="form-control form-control-sm" formControlName="staffId" id="staffId">
             <div *ngIf="hasError('staffId','required')" class="invalid-feedback">
@@ -101,7 +101,7 @@
 
         <div class="form-group">
             <label class="text-uppercase"for="phone">Phone</label>
-            <input maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('phone') && isTouched('phone'),
+            <input NumbersOnly maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('phone') && isTouched('phone'),
                          'is-valid' : !hasErrors('phone') && isTouched('phone')}"
                 class="form-control form-control-sm" formControlName="phone" id="phone">
             <div *ngIf="hasError('phone','required')" class="invalid-feedback">
@@ -248,7 +248,7 @@
         </div>
         <div class="form-group">
             <label class="text-uppercase"for="familyIncome">Family Income </label>
-            <input maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('familyIncome') && isTouched('familyIncome'),
+            <input NumbersOnly maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('familyIncome') && isTouched('familyIncome'),
                          'is-valid' : !hasErrors('familyIncome') && isTouched('familyIncome')}"
                 class="form-control form-control-sm" formControlName="familyIncome" id="familyIncome">
             <div *ngIf="hasError('familyIncome','required')" class="invalid-feedback">
@@ -277,7 +277,7 @@
 
         <div class="form-group">
             <label class="text-uppercase"for="loanAmount">Loan Amount </label>
-            <input maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('loanAmount') && isTouched('loanAmount'),
+            <input NumbersOnly maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('loanAmount') && isTouched('loanAmount'),
                          'is-valid' : !hasErrors('loanAmount') && isTouched('loanAmount')}"
                 class="form-control form-control-sm" formControlName="loanAmount" id="loanAmount">
             <div *ngIf="hasError('loanAmount','required')" class="invalid-feedback">
@@ -290,7 +290,7 @@
         </div>
         <div class="form-group">
             <label class="text-uppercase"for="loanProcesingFee">Loan Procesing Fee </label>
-            <input maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('loanProcesingFee') && isTouched('loanProcesingFee'),
+            <input NumbersOnly maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('loanProcesingFee') && isTouched('loanProcesingFee'),
                          'is-valid' : !hasErrors('loanProcesingFee') && isTouched('loanProcesingFee')}"
                 class="form-control form-control-sm" formControlName="loanProcesingFee"
                 id="loanProcesingFee">
@@ -305,7 +305,7 @@
 
         <div class="form-group">
             <label class="text-uppercase"for="insuranceFee">Insurance Fee </label>
-            <input maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('insuranceFee') && isTouched('insuranceFee'),
+            <input NumbersOnly maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('insuranceFee') && isTouched('insuranceFee'),
                          'is-valid' : !hasErrors('insuranceFee') && isTouched('insuranceFee')}"
                 class="form-control form-control-sm" formControlName="insuranceFee" id="insuranceFee">
             <div *ngIf="hasError('insuranceFee','required')" class="invalid-feedback">
@@ -379,7 +379,7 @@
         </div>
         <div class="form-group">
             <label class="text-uppercase"for="ciIdProof">Coinsurer Id Proof</label>
-            <input maxlength="12" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('ciIdProof') && isTouched('ciIdProof'),
+            <input NumbersOnly maxlength="12" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('ciIdProof') && isTouched('ciIdProof'),
                          'is-valid' : !hasErrors('ciIdProof') && isTouched('ciIdProof')}"
                 class="form-control form-control-sm" formControlName="ciIdProof" id="ciIdProof">
             <div *ngIf="hasError('ciIdProof','required')" class="invalid-feedback">
@@ -392,7 +392,7 @@
         </div>
         <div class="form-group">
             <label class="text-uppercase"for="pin">PIN</label>
-            <input maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('pin') && isTouched('pin'),
+            <input NumbersOnly maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('pin') && isTouched('pin'),
                          'is-valid' : !hasErrors('pin') && isTouched('pin')}" class="form-control form-control-sm"
                             formControlName="pin" id="pin">
             <div *ngIf="hasError('pin','required')" class="invalid-feedback">
@@ -418,7 +418,7 @@
         </div>
         <div class="form-group">
             <label class="text-uppercase"for="accountNumber">Account Number</label>
-            <input maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('accountNumber') && isTouched('accountNumber'),
+            <input NumbersOnly maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('accountNumber') && isTouched('accountNumber'),
                          'is-valid' : !hasErrors('accountNumber') && isTouched('accountNumber')}"
                 class="form-control form-control-sm" formControlName="accountNumber" id="accountNumber">
             <div *ngIf="hasError('accountNumber','required')" class="invalid-feedback">
