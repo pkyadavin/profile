@@ -62,7 +62,7 @@ export class ProfileEditComponent  implements OnInit , AfterViewInit{
       
    
     
-      pin	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(12)]], 
+      pin	:['',[Validators.required,Validators.minLength(6),Validators.maxLength(6)]], 
       loanAmount	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(12)]], 
       loanProcesingFee	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(12)]], 
       insuranceFee	:['',[Validators.required,Validators.minLength(3),Validators.maxLength(12)]], 

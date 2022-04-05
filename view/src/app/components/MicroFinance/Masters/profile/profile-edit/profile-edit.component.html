@@ -319,9 +319,16 @@
 
         <div class="form-group">
             <label class="text-uppercase"for="loanPurpose">Loan Purpose </label>
-            <input maxlength="100" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('loanPurpose') && isTouched('loanPurpose'),
-                         'is-valid' : !hasErrors('loanPurpose') && isTouched('loanPurpose')}"
-                class="form-control form-control-sm" formControlName="loanPurpose" id="loanPurpose">
+            <select class="text-uppercase" name="loanPurpose" maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('loanPurpose') && isTouched('loanPurpose'),
+             'is-valid' : !hasErrors('loanPurpose') && isTouched('loanPurpose')}"
+    class="form-control form-control-sm" formControlName="loanPurpose" id="loanPurpose">
+                    <option value="shop" selected>shop</option>
+                    <option value="agri">agri</option>
+                    <option value="vegitable">vegitable</option>
+                    <option value="animals">animals</option>
+                </select>
+
+
             <div *ngIf="hasError('loanPurpose','required')" class="invalid-feedback">
                 loanPurposeis required
             </div>
@@ -392,14 +399,14 @@
         </div>
         <div class="form-group">
             <label class="text-uppercase"for="pin">PIN</label>
-            <input NumbersOnly maxlength="10" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('pin') && isTouched('pin'),
+            <input NumbersOnly maxlength="6" autocomplete="off" type="text" [ngClass]="{'is-invalid' : hasErrors('pin') && isTouched('pin'),
                          'is-valid' : !hasErrors('pin') && isTouched('pin')}" class="form-control form-control-sm"
                             formControlName="pin" id="pin">
             <div *ngIf="hasError('pin','required')" class="invalid-feedback">
                 pin is required
             </div>
             <div *ngIf="hasError('pin','minlength') || hasError('pin','maxlength')" class="invalid-feedback">
-                Must be 10 characters
+                Must be 6 characters
             </div>
         </div>
         <div class="form-group">

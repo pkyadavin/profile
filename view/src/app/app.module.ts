@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SummaryPipe } from './pipes/summary.pipe';
 
-import { HomeComponent } from './components/home/home.component';
+ 
 import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
@@ -38,7 +38,7 @@ import { UploadComponent } from './components/upload/upload.component';
   declarations: [
     AppComponent,
     SummaryPipe,
-    HomeComponent,
+ 
     LoginComponent,
     NavbarComponent,
     NotFoundComponent, 
