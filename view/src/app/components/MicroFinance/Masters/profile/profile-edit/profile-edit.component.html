@@ -1,7 +1,7 @@
 <div class="container" *ngIf="!showloader">
 
     <div class="d-flex justify-content-center">
-        <h4 class=" mt-5">{{ isNew() ?'Create' :'Edit' }} Profile </h4>
+        <h4 class=" mt-5" >{{ isNew() ?'Create' :'Edit' }} Profile </h4>
     </div>
     <div class="d-flex justify-content-center">
         <img [src]="img">
@@ -31,7 +31,7 @@
                          'is-valid' : !hasErrors('custmerId') && isTouched('custmerId')}"
                 class="form-control form-control-sm" formControlName="custmerId" id="custmerId">
             <div *ngIf="hasError('custmerId','required')" class="invalid-feedback">
-                custmerId is required
+                Custmer Id is required
             </div>
             <div *ngIf="hasError('custmerId','minlength') || hasError('custmerId','maxlength')" class="invalid-feedback">
                 Must be 10 characters
@@ -43,7 +43,7 @@
                          'is-valid' : !hasErrors('loanId') && isTouched('loanId')}"
                 class="form-control form-control-sm" formControlName="loanId" id="loanId">
             <div *ngIf="hasError('loanId','required')" class="invalid-feedback">
-                loanId is required
+                loan Id is required
             </div>
             <div *ngIf="hasError('loanId','minlength') || hasError('loanId','maxlength')" class="invalid-feedback">
                 Must be 10 characters
@@ -55,7 +55,7 @@
                          'is-valid' : !hasErrors('centerName') && isTouched('centerName')}"
                 class="form-control form-control-sm" formControlName="centerName" id="centerName">
             <div *ngIf="hasError('centerName','required')" class="invalid-feedback">
-                centerName is required
+                Center Name is required
             </div>
             <div *ngIf="hasError('centerName','minlength') || hasError('centerName','maxlength')" class="invalid-feedback">
                 Must be 10 characters
@@ -67,7 +67,7 @@
                          'is-valid' : !hasErrors('centerId') && isTouched('centerId')}"
                 class="form-control form-control-sm" formControlName="centerId" id="centerId">
             <div *ngIf="hasError('centerId','required')" class="invalid-feedback">
-                centerId is required
+                Center Id is required
             </div>
             <div *ngIf="hasError('centerId','minlength') || hasError('centerId','maxlength')" class="invalid-feedback">
                 Must be 10 characters
@@ -79,7 +79,7 @@
                          'is-valid' : !hasErrors('staffName') && isTouched('staffName')}"
                 class="form-control form-control-sm" formControlName="staffName" id="staffName">
             <div *ngIf="hasError('staffName','required')" class="invalid-feedback">
-                staffName is required
+                Staff Name is required
             </div>
             <div *ngIf="hasError('staffName','minlength') || hasError('staffName','maxlength')" class="invalid-feedback">
                 Must be 10 characters
@@ -92,7 +92,7 @@
                          'is-valid' : !hasErrors('staffId') && isTouched('staffId')}"
                 class="form-control form-control-sm" formControlName="staffId" id="staffId">
             <div *ngIf="hasError('staffId','required')" class="invalid-feedback">
-                staffId is required
+                Staff Id is required
             </div>
             <div *ngIf="hasError('staffId','minlength') || hasError('staffId','maxlength')" class="invalid-feedback">
                 Must be 10 characters
@@ -105,7 +105,7 @@
                          'is-valid' : !hasErrors('phone') && isTouched('phone')}"
                 class="form-control form-control-sm" formControlName="phone" id="phone">
             <div *ngIf="hasError('phone','required')" class="invalid-feedback">
-                phone is required
+                Phone is required
             </div>
             <div *ngIf="hasError('phone','minlength') || hasError('phone','maxlength')" class="invalid-feedback">
                 Must be 10 characters
@@ -117,7 +117,7 @@
                          'is-valid' : !hasErrors('name') && isTouched('name')}" class="form-control form-control-sm"
                 formControlName="name" id="name">
             <div *ngIf="hasError('name','required')" class="invalid-feedback">
-                name is required
+                Name is required
             </div>
             <div *ngIf="hasError('name','minlength') || hasError('name','maxlength')" class="invalid-feedback">
                 Must be 10 characters
@@ -148,7 +148,7 @@
                 </select>
 
                 <div *ngIf="hasError('gender','required')" class="invalid-feedback">
-                gender is required
+                Gender is required
             </div>
             <div *ngIf="hasError('gender','minlength') || hasError('gender','maxlength')" class="invalid-feedback">
                 Must be 10 characters
@@ -174,7 +174,7 @@
                          'is-valid' : !hasErrors('fatherhusbandId') && isTouched('fatherhusbandId')}"
                 class="form-control form-control-sm" formControlName="fatherhusbandId" id="fatherhusbandId">
             <div *ngIf="hasError('fatherhusbandId','required')" class="invalid-feedback">
-                fatherhusbandId is required
+                Father/Husband Id is required
             </div>
             <div *ngIf="hasError('fatherhusbandId','minlength') || hasError('fatherhusbandId','maxlength')"
                 class="invalid-feedback">
@@ -214,7 +214,7 @@
                          'is-valid' : !hasErrors('address') && isTouched('address')}"
                 class="form-control form-control-sm" formControlName="address" id="address"></textarea>
             <div *ngIf="hasError('address','required')" class="invalid-feedback">
-                address is required
+                Address is required
             </div>
             <div *ngIf="hasError('address','minlength') || hasError('address','maxlength')" class="invalid-feedback">
                 Must be 10 characters
@@ -226,7 +226,7 @@
                          'is-valid' : !hasErrors('district') && isTouched('district')}"
                 class="form-control form-control-sm" formControlName="district" id="district">
             <div *ngIf="hasError('district','required')" class="invalid-feedback">
-                district is required
+                District is required
             </div>
             <div *ngIf="hasError('district','minlength') || hasError('district','maxlength')"
                 class="invalid-feedback">
@@ -239,7 +239,7 @@
                          'is-valid' : !hasErrors('language') && isTouched('language')}"
                 class="form-control form-control-sm" formControlName="language" id="language">
             <div *ngIf="hasError('language','required')" class="invalid-feedback">
-                language is required
+                Language is required
             </div>
             <div *ngIf="hasError('language','minlength') || hasError('language','maxlength')"
                 class="invalid-feedback">
@@ -267,7 +267,7 @@
                 class="form-control form-control-sm" formControlName="rentedOrSelfHome"
                 id="rentedOrSelfHome">
             <div *ngIf="hasError('rentedOrSelfHome','required')" class="invalid-feedback">
-                rentedOrSelfHomeis required
+                Rented Or Self Home is required
             </div>
             <div *ngIf="hasError('rentedOrSelfHome','minlength') || hasError('rentedOrSelfHome','maxlength')"
                 class="invalid-feedback">
@@ -281,7 +281,7 @@
                          'is-valid' : !hasErrors('loanAmount') && isTouched('loanAmount')}"
                 class="form-control form-control-sm" formControlName="loanAmount" id="loanAmount">
             <div *ngIf="hasError('loanAmount','required')" class="invalid-feedback">
-                loanAmount is required
+                Loan Amount is required
             </div>
             <div *ngIf="hasError('loanAmount','minlength') || hasError('loanAmount','maxlength')"
                 class="invalid-feedback">
@@ -295,7 +295,7 @@
                 class="form-control form-control-sm" formControlName="loanProcesingFee"
                 id="loanProcesingFee">
             <div *ngIf="hasError('loanProcesingFee','required')" class="invalid-feedback">
-                loanProcesingFee is required
+                Loan Procesing Fee is required
             </div>
             <div *ngIf="hasError('loanProcesingFee','minlength') || hasError('loanProcesingFee','maxlength')"
                 class="invalid-feedback">
@@ -309,7 +309,7 @@
                          'is-valid' : !hasErrors('insuranceFee') && isTouched('insuranceFee')}"
                 class="form-control form-control-sm" formControlName="insuranceFee" id="insuranceFee">
             <div *ngIf="hasError('insuranceFee','required')" class="invalid-feedback">
-                insuranceFee is required
+                Insurance Fee is required
             </div>
             <div *ngIf="hasError('insuranceFee','minlength') || hasError('insuranceFee','maxlength')"
                 class="invalid-feedback">
@@ -330,7 +330,7 @@
 
 
             <div *ngIf="hasError('loanPurpose','required')" class="invalid-feedback">
-                loanPurposeis required
+                Loan Purpose is required
             </div>
             <div *ngIf="hasError('loanPurpose','minlength') || hasError('loanPurpose','maxlength')"
                 class="invalid-feedback">
@@ -343,7 +343,7 @@
                          'is-valid' : !hasErrors('coinsurerName') && isTouched('coinsurerName')}"
                 class="form-control form-control-sm" formControlName="coinsurerName" id="coinsurerName">
             <div *ngIf="hasError('coinsurerName','required')" class="invalid-feedback">
-                coinsurerNameis required
+                Coinsurer Name is required
             </div>
             <div *ngIf="hasError('coinsurerName','minlength') || hasError('coinsurerName','maxlength')"
                 class="invalid-feedback">
@@ -364,7 +364,7 @@
                 </select>
 
             <div *ngIf="hasError('ciGender','required')" class="invalid-feedback">
-                ciGender is required
+                Coinsurer Gender is required
             </div>
             <div *ngIf="hasError('ciGender','minlength') || hasError('ciGender','maxlength')"
                 class="invalid-feedback">
@@ -378,7 +378,7 @@
                          'is-valid' : !hasErrors('cidob') && isTouched('cidob')}"
                 class="form-control form-control-sm" formControlName="cidob" id="cidob">
             <div *ngIf="hasError('cidob','required')" class="invalid-feedback">
-                cidob is required
+                Coinsurer dob is required
             </div>
             <div *ngIf="hasError('cidob','minlength') || hasError('cidob','maxlength')" class="invalid-feedback">
                 Must be 10 characters
@@ -390,7 +390,7 @@
                          'is-valid' : !hasErrors('ciIdProof') && isTouched('ciIdProof')}"
                 class="form-control form-control-sm" formControlName="ciIdProof" id="ciIdProof">
             <div *ngIf="hasError('ciIdProof','required')" class="invalid-feedback">
-                ciIdProof is required
+                Coinsurer Id Proof is required
             </div>
             <div *ngIf="hasError('ciIdProof','minlength') || hasError('ciIdProof','maxlength')"
                 class="invalid-feedback">
@@ -403,7 +403,7 @@
                          'is-valid' : !hasErrors('pin') && isTouched('pin')}" class="form-control form-control-sm"
                             formControlName="pin" id="pin">
             <div *ngIf="hasError('pin','required')" class="invalid-feedback">
-                pin is required
+                PIN is required
             </div>
             <div *ngIf="hasError('pin','minlength') || hasError('pin','maxlength')" class="invalid-feedback">
                 Must be 6 characters
@@ -416,7 +416,7 @@
                 class="form-control form-control-sm" formControlName="bankAccountHolderName"
                 id="bankAccountHolderName">
             <div *ngIf="hasError('bankAccountHolderName','required')" class="invalid-feedback">
-                bankAccountHolderName is required
+                Bank Account Holder Name is required
             </div>
             <div *ngIf="hasError('bankAccountHolderName','minlength') || hasError('bankAccountHolderName','maxlength')"
                 class="invalid-feedback">
@@ -429,7 +429,7 @@
                          'is-valid' : !hasErrors('accountNumber') && isTouched('accountNumber')}"
                 class="form-control form-control-sm" formControlName="accountNumber" id="accountNumber">
             <div *ngIf="hasError('accountNumber','required')" class="invalid-feedback">
-                accountNumber is required
+                Account Number is required
             </div>
             <div *ngIf="hasError('accountNumber','minlength') || hasError('accountNumber','maxlength')"
                 class="invalid-feedback">
@@ -442,7 +442,7 @@
                          'is-valid' : !hasErrors('ifscCode') && isTouched('ifscCode')}"
                 class="form-control form-control-sm" formControlName="ifscCode" id="ifscCode">
             <div *ngIf="hasError('ifscCode','required')" class="invalid-feedback">
-                ifscCode is required
+                ifsc Code is required
             </div>
             <div *ngIf="hasError('ifscCode','minlength') || hasError('ifscCode','maxlength')"
                 class="invalid-feedback">
@@ -455,7 +455,7 @@
                          'is-valid' : !hasErrors('bankName') && isTouched('bankName')}"
                 class="form-control form-control-sm" formControlName="bankName" id="bankName">
             <div *ngIf="hasError('bankName','required')" class="invalid-feedback">
-                bankName is required
+                Bank Name is required
             </div>
             <div *ngIf="hasError('bankName','minlength') || hasError('bankName','maxlength')"
                 class="invalid-feedback">
