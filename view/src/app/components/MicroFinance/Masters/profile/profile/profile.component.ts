@@ -78,11 +78,11 @@ export class ProfileComponent implements OnInit {
     this.columnDefs = [
       { headerName: 'id'.toUpperCase(), field: 'id',editable: true, sortable: true, filter: 'agTextColumnFilter', width: 150 ,floatingFilter:true  },
       { headerName: 'Adhar'.toUpperCase(), field: 'Adhar',editable: true, sortable: true, filter: 'agTextColumnFilter', width: 150 ,floatingFilter:true  },
-      { headerName: 'Profile'.toUpperCase(), field: 'Profile',editable: true, sortable: true, filter: 'agTextColumnFilter', width: 300 ,floatingFilter:true 
+     // { headerName: 'Profile'.toUpperCase(), field: 'Profile',editable: true, sortable: true, filter: 'agTextColumnFilter', width: 300 ,floatingFilter:true 
       
-     },
+     //},
       {
-        headerName: 'View', width: 75, cellRenderer: (param) =>
+        headerName: 'View'.toUpperCase(), width: 75, cellRenderer: (param) =>
         this.EDITRenderer(param)
       }, 
     ];
