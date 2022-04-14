@@ -24,7 +24,7 @@ export class ProfileComponent implements OnInit {
   columnDefs = [];
   tooltipShowDelay = 0;
    tooltipHideDelay = 2000;
- 
+   searchwords;
  
  
   constructor(
@@ -54,6 +54,21 @@ export class ProfileComponent implements OnInit {
       this.userdatas = userdatas;
       console.log(userdatas);
     });
+  }
+  search(){ 
+
+    if(this.userdatas.filter(v=>v.Profile && v.Profile.indexOf(this.searchwords)>-1).slice().length>0){
+      this.userdatas = this.userdatas.filter(v=>v.Profile && v.Profile.indexOf(this.searchwords)>-1).slice(); 
+      this.onChangePageSize();
+      if(this.userdatas.length>0){
+        this.showgrid=true;
+      }else{
+        this.showgrid=false;
+      } 
+    }else{
+      this.toastr.info("No Data found matching search."); 
+
+    }       
   }
 
   defaultColDef;

@@ -47,7 +47,10 @@
     <ng-template [ngIf]="userdatas.length > 0" [ngIfElse]="nodatas" >        
           
         <ng-template [ngIf]="showgrid">
-
+            <div class="form-group">                 
+                <input maxlength="12" autocomplete="off" type="text" 
+    class="form-control form-control-sm"  [(ngModel)]="searchwords"(keydown.enter)="search()" >                  
+        </div>
         <ag-grid-angular 
             [gridOptions]="gridOptions" 
             [enableSorting]="true" 
